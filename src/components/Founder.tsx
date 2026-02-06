@@ -62,7 +62,7 @@ const Founder = () => {
           transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
           className="max-w-md mx-auto mb-16"
         >
-          <div className="relative p-6 border border-border bg-background/50">
+          <div className="relative p-6">
             <p className="text-muted-foreground text-sm leading-relaxed mb-6">
               "I founded ThinkFlow to bridge the gap between human intuition and autonomous execution. We don't just build tools; we architect the intelligence that defines the next era of enterprise."
             </p>
