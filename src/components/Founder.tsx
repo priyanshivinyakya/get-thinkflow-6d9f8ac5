@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
+import priyanshiPhoto from "@/assets/priyanshi-jain.png";
 
 const Founder = () => {
   const scrollToContact = () => {
@@ -67,8 +68,12 @@ const Founder = () => {
             </p>
             
             <div className="flex items-center gap-4">
-              <div className="w-16 h-16 rounded-full bg-muted overflow-hidden flex items-center justify-center">
-                <span className="font-display text-2xl font-bold text-muted-foreground">P</span>
+              <div className="w-16 h-16 rounded-full bg-muted overflow-hidden">
+                <img 
+                  src={priyanshiPhoto} 
+                  alt="Priyanshi Jain" 
+                  className="w-full h-full object-cover object-top"
+                />
               </div>
               <div>
                 <p className="font-semibold text-foreground">PRIYANSHI</p>
