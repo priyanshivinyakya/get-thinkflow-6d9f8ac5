@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import priyanshiPhoto from "@/assets/priyanshi-jain.png";
 
 const Founder = () => {
   const scrollToContact = () => {
@@ -13,70 +12,12 @@ const Founder = () => {
   return (
     <section id="founder" className="py-24 md:py-32 bg-card">
       <div className="container mx-auto px-6">
-        {/* Logo */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-          className="flex items-center gap-2 mb-8"
-        >
-          <div className="w-8 h-8 border border-foreground flex items-center justify-center">
-            <span className="font-display text-sm font-bold">T</span>
-          </div>
-          <span className="text-minimal text-foreground tracking-[0.3em]">
-            THINKFLOW
-          </span>
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-          className="text-right mb-8"
-        >
-          <span className="text-minimal text-muted-foreground tracking-[0.3em]">
-            FOUNDER
-          </span>
-        </motion.div>
-
-
-        {/* Founder Card */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-          className="max-w-md mx-auto mb-16"
-        >
-          <div className="relative p-6 border border-border bg-background/50">
-            <p className="text-muted-foreground text-sm leading-relaxed mb-6">
-              "I founded ThinkFlow to bridge the gap between human intuition and autonomous execution. We don't just build tools; we architect the intelligence that defines the next era of enterprise."
-            </p>
-            
-            <div className="flex items-center gap-4">
-              <div className="w-16 h-16 rounded-full bg-muted overflow-hidden">
-                <img 
-                  src={priyanshiPhoto} 
-                  alt="Priyanshi Jain" 
-                  className="w-full h-full object-cover object-top"
-                />
-              </div>
-              <div>
-                <p className="font-semibold text-foreground">PRIYANSHI</p>
-                <p className="text-muted-foreground text-sm">JAIN</p>
-              </div>
-            </div>
-          </div>
-        </motion.div>
-
         {/* ThinkFlow Standard */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.8, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
+          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           className="text-center"
         >
           <h3 className="font-display text-2xl md:text-3xl font-bold mb-6 tracking-wide">
