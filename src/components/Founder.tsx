@@ -41,18 +41,6 @@ const Founder = () => {
           </span>
         </motion.div>
 
-        {/* The Architect Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-          className="text-center mb-12"
-        >
-          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold tracking-wide">
-            THE ARCHITECT
-          </h2>
-        </motion.div>
 
         {/* Founder Card */}
         <motion.div

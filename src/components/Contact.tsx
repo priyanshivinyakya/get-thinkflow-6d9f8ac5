@@ -58,6 +58,19 @@ const Contact = () => {
               <span>9424579332</span>
             </motion.a>
           </div>
+
+          {/* Built by footer */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.5 }}
+            className="mt-16 pt-8 border-t border-border"
+          >
+            <p className="text-muted-foreground">
+              Built by Priyanshi Vinyakya 💡
+            </p>
+          </motion.div>
         </motion.div>
       </div>
     </section>
