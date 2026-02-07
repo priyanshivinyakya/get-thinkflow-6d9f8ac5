@@ -6,6 +6,7 @@ import Services from "@/components/Services";
 import Founder from "@/components/Founder";
 import CTA from "@/components/CTA";
 import Contact from "@/components/Contact";
+import AIBotButton from "@/components/AIBotButton";
 
 const Index = () => {
   return (
@@ -19,6 +20,7 @@ const Index = () => {
       <Founder />
       <CTA />
       <Contact />
+      <AIBotButton />
     </div>
   );
 };
