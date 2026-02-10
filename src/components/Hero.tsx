@@ -67,18 +67,6 @@ const Hero = () => {
           THE ELITE INFRASTRUCTURE FOR AUTONOMOUS ENTERPRISE.
         </motion.p>
 
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
-        >
-          <Button 
-            onClick={scrollToContact}
-            className="bg-foreground text-background hover:bg-foreground/90 text-minimal tracking-[0.2em] px-8 py-6"
-          >
-            REQUEST ACCESS
-          </Button>
-        </motion.div>
       </div>
     </section>
   );
