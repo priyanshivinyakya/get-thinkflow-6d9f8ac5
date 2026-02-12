@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import heroWaves from "@/assets/hero-waves.jpg";
-import thinkflowLogo from "@/assets/thinkflow-logo.png";
+import thinkflowLogo from "@/assets/thinkflow-logo-cutout.png";
 
 const Hero = () => {
   const scrollToContact = () => {
