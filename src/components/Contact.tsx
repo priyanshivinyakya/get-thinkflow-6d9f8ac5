@@ -20,12 +20,12 @@ const Contact = () => {
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           className="text-center mb-12"
         >
-          <span className="inline-block px-4 py-2 bg-muted text-muted-foreground text-sm rounded-full mb-4">
-            Get in touch
-          </span>
-          <h2 className="font-display text-3xl md:text-4xl font-bold text-primary tracking-wide">
-            Contact
+          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-primary tracking-tight mb-2">
+            LOOKING TO AUTOMATE YOUR WORKFLOWS?
           </h2>
+          <p className="font-display text-2xl md:text-3xl lg:text-4xl font-bold text-muted-foreground">
+            LET'S TALK.
+          </p>
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
