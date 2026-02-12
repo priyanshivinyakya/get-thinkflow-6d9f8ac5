@@ -18,6 +18,7 @@ const Navigation = () => {
       <div className="container mx-auto px-6 py-4 flex items-center justify-between">
         <div className="flex items-center gap-2">
           <img src={thinkflowLogo} alt="ThinkFlow" className="h-8 w-auto" />
+          <span className="text-minimal text-foreground tracking-[0.3em]">THINKFLOW</span>
         </div>
         
         <div className="hidden md:flex items-center space-x-12">
