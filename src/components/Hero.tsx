@@ -73,7 +73,7 @@ const Hero = () => {
         >
           <Button 
             onClick={scrollToContact}
-            className="bg-foreground text-background hover:bg-foreground/90 text-minimal tracking-[0.2em] px-8 py-6"
+            className="bg-foreground text-background hover:bg-foreground/90 text-minimal tracking-[0.2em] px-10 py-6 rounded-full"
           >
             Start Your Flow
           </Button>
