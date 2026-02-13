@@ -31,9 +31,8 @@ const Hero = () => {
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           className="mb-6"
         >
-          <div className="flex flex-col items-center justify-center mb-8">
-            <img src={thinkflowLogo} alt="ThinkFlow" className="h-16 w-auto mb-2" />
-            <span className="text-minimal text-foreground tracking-[0.3em]">THINKFLOW</span>
+          <div className="flex items-center justify-center mb-8">
+            <img src={thinkflowLogo} alt="ThinkFlow" className="h-16 w-auto" />
           </div>
         </motion.div>
 
