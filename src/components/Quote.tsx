@@ -21,35 +21,14 @@ const Quote = () => {
             </span>
           </div>
 
-          {/* Tagline */}
-          <p className="text-minimal text-muted-foreground mb-12 tracking-[0.3em]">
-            YOUR DATA ISN'T OUR BUSINESS. KEEPING IT SAFE IS.
-          </p>
-
-          {/* Main Quote - Mixed white/gray effect */}
-          <h2 className="font-display text-3xl md:text-5xl lg:text-6xl font-bold mb-12 leading-[1.2] tracking-tight">
-            <span className="text-foreground">all your per</span>
-            <span className="text-muted-foreground">sonal data and</span>
-            {" "}
-            <span className="text-foreground">tra</span>
-            <span className="text-muted-foreground">n</span>
-            <span className="text-foreground">sactions</span>
-            {" "}
-            <span className="text-muted-foreground">a</span>
-            <span className="text-foreground">r</span>
-            <span className="text-muted-foreground">e encrypted and</span>
-            {" "}
-            <span className="text-foreground">secur</span>
-            <span className="text-muted-foreground">ed. there's </span>
-            <span className="text-muted-foreground">no room for mistakes</span>
-            {" "}
-            <span className="text-foreground">beca</span>
-            <span className="text-muted-foreground">u</span>
-            <span className="text-foreground">se</span>
-            {" "}
-            <span className="text-muted-foreground">we </span>
-            <span className="text-foreground">didn't leave any.</span>
+          {/* Main Quote */}
+          <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-medium mb-8 leading-relaxed">
+            "IN 2026, SCALE ISN'T MEASURED BY HEADCOUNT. IT IS MEASURED BY THE FLOW OF YOUR INTELLIGENCE."
           </h2>
+
+          <p className="text-muted-foreground text-lg md:text-xl mb-12 max-w-3xl mx-auto">
+            Most agencies build tools. We don't just build tools; we architect the autonomous departments that eliminate manual friction.
+          </p>
 
           {/* Tags */}
           <div className="flex flex-wrap justify-center gap-4">
