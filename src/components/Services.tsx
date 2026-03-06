@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
+import thinkflowLogo from "@/assets/thinkflow-logo.png";
 
 const Services = () => {
   const services = [
@@ -37,12 +38,7 @@ const Services = () => {
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           className="flex items-center gap-2 mb-16"
         >
-          <div className="w-8 h-8 border border-foreground flex items-center justify-center">
-            <span className="font-display text-sm font-bold">T</span>
-          </div>
-          <span className="text-minimal text-foreground tracking-[0.3em]">
-            THINKFLOW
-          </span>
+          <img src={thinkflowLogo} alt="ThinkFlow" className="h-10 w-auto" />
         </motion.div>
 
         {/* Tabbed Services */}

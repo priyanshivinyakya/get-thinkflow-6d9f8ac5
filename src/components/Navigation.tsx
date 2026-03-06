@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
+import thinkflowLogo from "@/assets/thinkflow-logo.png";
+import { motion, AnimatePresence } from "framer-motion";
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -16,13 +18,8 @@ const Navigation = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
       <div className="container mx-auto px-6 py-4 flex items-center justify-between">
-        <div className="flex items-center gap-2">
-          <div className="w-8 h-8 border border-foreground flex items-center justify-center">
-            <span className="font-display text-sm font-bold">T</span>
-          </div>
-          <span className="text-minimal text-foreground tracking-[0.3em]">
-            THINKFLOW
-          </span>
+        <div className="flex items-center gap-3">
+          <img src={thinkflowLogo} alt="ThinkFlow" className="h-9 w-auto" />
         </div>
         
         <div className="hidden md:flex items-center space-x-12">

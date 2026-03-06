@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
+import thinkflowLogo from "@/assets/thinkflow-logo.png";
 
 const Hero = () => {
   const scrollToContact = () => {
@@ -89,13 +90,8 @@ const Hero = () => {
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           className="mb-6"
         >
-          <div className="flex items-center justify-center gap-2 mb-8">
-            <div className="w-10 h-10 border border-foreground flex items-center justify-center">
-              <span className="font-display text-lg font-bold">T</span>
-            </div>
-            <span className="text-minimal text-foreground tracking-[0.3em]">
-              THINKFLOW
-            </span>
+          <div className="flex items-center justify-center mb-8">
+            <img src={thinkflowLogo} alt="ThinkFlow" className="h-16 md:h-20 w-auto" />
           </div>
         </motion.div>
 
