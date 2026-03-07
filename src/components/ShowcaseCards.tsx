@@ -78,9 +78,12 @@ const ShowcaseCards = () => {
                   </span>
                 </div>
 
-                <h4 className="text-2xl md:text-3xl font-bold leading-tight whitespace-pre-line text-foreground">
+                <h4 className="text-2xl md:text-3xl font-bold leading-tight whitespace-pre-line text-foreground mb-4">
                   {card.headline}
                 </h4>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  {card.description}
+                </p>
               </div>
 
               <div className="relative z-10">
