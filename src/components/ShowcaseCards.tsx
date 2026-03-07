@@ -8,24 +8,28 @@ const ShowcaseCards = () => {
       icon: Bot,
       label: "AI AGENTS",
       headline: "autonomous agents.\nzero oversight.",
+      description: "Deploy intelligent AI agents that handle tasks, make decisions, and execute workflows automatically. Our agents operate 24/7, reducing manual effort while increasing speed, accuracy, and productivity.",
       gradient: "from-purple-600/40 via-pink-500/20 to-transparent",
     },
     {
       icon: Brain,
       label: "RAG SYSTEMS",
       headline: "enterprise memory.\non demand.",
+      description: "Build Retrieval-Augmented Generation systems that connect AI with your company data. Instantly search documents, knowledge bases, and databases to deliver accurate, context-aware answers in real time.",
       gradient: "from-cyan-500/40 via-blue-500/20 to-transparent",
     },
     {
       icon: Workflow,
       label: "WORKFLOWS",
       headline: "automate processes.\nscale infinitely.",
+      description: "Design automated workflows that eliminate repetitive work and connect business operations. From lead handling to internal processes, our systems streamline tasks and scale as your business grows.",
       gradient: "from-green-500/40 via-emerald-500/20 to-transparent",
     },
     {
       icon: Zap,
       label: "INTEGRATIONS",
       headline: "connect everything.\nseamlessly.",
+      description: "Integrate AI with your existing tools, APIs, and platforms. We connect CRMs, databases, SaaS apps, and internal systems to create a unified, intelligent infrastructure.",
       gradient: "from-amber-500/40 via-orange-500/20 to-transparent",
     },
   ];
@@ -60,7 +64,7 @@ const ShowcaseCards = () => {
             transition={{ duration: 0.5, delay: index * 0.1 }}
             className="min-w-[320px] md:min-w-[380px] snap-start flex-shrink-0 group"
           >
-            <div className="relative border border-border rounded-lg p-8 h-[400px] flex flex-col justify-between overflow-hidden bg-card hover:border-muted-foreground/30 transition-colors duration-500">
+            <div className="relative border border-border rounded-lg p-8 h-[480px] flex flex-col justify-between overflow-hidden bg-card hover:border-muted-foreground/30 transition-colors duration-500">
               {/* Gradient glow at bottom */}
               <div
                 className={`absolute bottom-0 left-0 right-0 h-1/2 bg-gradient-to-t ${card.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-700`}
@@ -74,9 +78,12 @@ const ShowcaseCards = () => {
                   </span>
                 </div>
 
-                <h4 className="text-2xl md:text-3xl font-bold leading-tight whitespace-pre-line text-foreground">
+                <h4 className="text-2xl md:text-3xl font-bold leading-tight whitespace-pre-line text-foreground mb-4">
                   {card.headline}
                 </h4>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  {card.description}
+                </p>
               </div>
 
               <div className="relative z-10">
