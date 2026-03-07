@@ -64,7 +64,7 @@ const ShowcaseCards = () => {
             transition={{ duration: 0.5, delay: index * 0.1 }}
             className="min-w-[320px] md:min-w-[380px] snap-start flex-shrink-0 group"
           >
-            <div className="relative border border-border rounded-lg p-8 h-[400px] flex flex-col justify-between overflow-hidden bg-card hover:border-muted-foreground/30 transition-colors duration-500">
+            <div className="relative border border-border rounded-lg p-8 h-[480px] flex flex-col justify-between overflow-hidden bg-card hover:border-muted-foreground/30 transition-colors duration-500">
               {/* Gradient glow at bottom */}
               <div
                 className={`absolute bottom-0 left-0 right-0 h-1/2 bg-gradient-to-t ${card.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-700`}
