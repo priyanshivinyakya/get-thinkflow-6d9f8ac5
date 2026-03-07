@@ -8,24 +8,28 @@ const ShowcaseCards = () => {
       icon: Bot,
       label: "AI AGENTS",
       headline: "autonomous agents.\nzero oversight.",
+      description: "Deploy intelligent AI agents that handle tasks, make decisions, and execute workflows automatically. Our agents operate 24/7, reducing manual effort while increasing speed, accuracy, and productivity.",
       gradient: "from-purple-600/40 via-pink-500/20 to-transparent",
     },
     {
       icon: Brain,
       label: "RAG SYSTEMS",
       headline: "enterprise memory.\non demand.",
+      description: "Build Retrieval-Augmented Generation systems that connect AI with your company data. Instantly search documents, knowledge bases, and databases to deliver accurate, context-aware answers in real time.",
       gradient: "from-cyan-500/40 via-blue-500/20 to-transparent",
     },
     {
       icon: Workflow,
       label: "WORKFLOWS",
       headline: "automate processes.\nscale infinitely.",
+      description: "Design automated workflows that eliminate repetitive work and connect business operations. From lead handling to internal processes, our systems streamline tasks and scale as your business grows.",
       gradient: "from-green-500/40 via-emerald-500/20 to-transparent",
     },
     {
       icon: Zap,
       label: "INTEGRATIONS",
       headline: "connect everything.\nseamlessly.",
+      description: "Integrate AI with your existing tools, APIs, and platforms. We connect CRMs, databases, SaaS apps, and internal systems to create a unified, intelligent infrastructure.",
       gradient: "from-amber-500/40 via-orange-500/20 to-transparent",
     },
   ];
