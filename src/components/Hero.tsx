@@ -23,7 +23,7 @@ const Hero = () => {
         >
           <source src="/hero-bg.mp4" type="video/mp4" />
         </video>
-        <div className="absolute inset-0 bg-background/70" />
+        <div className="absolute inset-0 bg-black/80" />
       </div>
 
       {/* Content */}
