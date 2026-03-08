@@ -6,7 +6,7 @@ import Services from "@/components/Services";
 import ShowcaseCards from "@/components/ShowcaseCards";
 import Stats from "@/components/Stats";
 import Founder from "@/components/Founder";
-import CTA from "@/components/CTA";
+
 import Contact from "@/components/Contact";
 import AIBotButton from "@/components/AIBotButton";
 
@@ -21,7 +21,7 @@ const Index = () => {
       <ShowcaseCards />
       <Stats />
       <Founder />
-      <CTA />
+      
       <Contact />
       <AIBotButton />
     </div>
