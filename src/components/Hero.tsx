@@ -1,9 +1,19 @@
 import { motion } from "framer-motion";
+import { useState, useRef, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import thinkflowLogo from "@/assets/thinkflow-logo.png";
-import SilkBackground from "@/components/SilkBackground";
 
 const Hero = () => {
+  const [videoLoaded, setVideoLoaded] = useState(false);
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (video && video.readyState >= 3) {
+      setVideoLoaded(true);
+    }
+  }, []);
+
   const scrollToContact = () => {
     const element = document.getElementById("contact");
     if (element) {
@@ -13,10 +23,21 @@ const Hero = () => {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
-      {/* Animated Silk Background */}
-      <div className="absolute inset-0">
-        <SilkBackground />
-        <div className="absolute inset-0 bg-black/20" />
+      {/* Video Background */}
+      <div className="absolute inset-0 bg-black">
+        <video
+          ref={videoRef}
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="auto"
+          onLoadedData={() => setVideoLoaded(true)}
+          className={`absolute inset-0 w-full h-full object-cover blur-[2px] transition-opacity duration-700 ${videoLoaded ? 'opacity-100' : 'opacity-0'}`}
+        >
+          <source src="/hero-bg.mp4" type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-black/35" />
       </div>
 
       {/* Content */}
@@ -75,7 +96,7 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 0.6, ease: [0.16, 1, 0.3, 1] }}
           className="flex justify-center mb-12"
         >
-          <Button size="lg" className="px-8 py-6 text-base font-medium bg-muted/40 hover:bg-muted/60 text-white border border-white/10 backdrop-blur-sm">
+          <Button size="lg" className="px-8 py-6 text-base font-medium bg-[#00C2FF] hover:bg-[#00E5FF] text-black">
             Request Access
           </Button>
         </motion.div>
