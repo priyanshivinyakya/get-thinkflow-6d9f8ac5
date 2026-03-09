@@ -23,7 +23,7 @@ const Hero = () => {
         >
           <source src="/hero-bg.mp4" type="video/mp4" />
         </video>
-        <div className="absolute inset-0 bg-black/40" />
+        <div className="absolute inset-0 bg-black/50" />
       </div>
 
       {/* Content */}
@@ -70,7 +70,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
-          className="text-base md:text-lg text-muted-foreground/80 mb-10 max-w-2xl mx-auto"
+          className="text-base md:text-lg text-white/90 mb-10 max-w-2xl mx-auto"
         >
           Build, deploy, and scale intelligent workflows across your entire company.
         </motion.p>
