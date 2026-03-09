@@ -23,7 +23,7 @@ const Hero = () => {
         >
           <source src="/hero-bg.mp4" type="video/mp4" />
         </video>
-        <div className="absolute inset-0 bg-black/50" />
+        <div className="absolute inset-0 bg-black/35" />
       </div>
 
       {/* Content */}
@@ -44,6 +44,7 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
           className="font-display text-5xl md:text-7xl lg:text-8xl font-bold mb-4 tracking-wide"
+          style={{ textShadow: '0 0 20px rgba(0, 200, 255, 0.4)' }}
         >
           THINKFLOW
         </motion.h1>
@@ -61,7 +62,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
-          className="text-lg md:text-xl text-muted-foreground mb-4 max-w-3xl mx-auto"
+          className="text-lg md:text-xl text-white mb-4 max-w-3xl mx-auto"
         >
           The operating system for AI-driven businesses.
         </motion.p>
@@ -81,10 +82,10 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 0.6, ease: [0.16, 1, 0.3, 1] }}
           className="flex flex-col sm:flex-row gap-4 justify-center mb-12"
         >
-          <Button size="lg" className="px-8 py-6 text-base font-medium">
+          <Button size="lg" className="px-8 py-6 text-base font-medium bg-[#00C2FF] hover:bg-[#00E5FF] text-black">
             Request Access
           </Button>
-          <Button variant="outline" size="lg" className="px-8 py-6 text-base font-medium border-white/20 hover:bg-white/10">
+          <Button variant="outline" size="lg" className="px-8 py-6 text-base font-medium bg-black border-[#444] text-white hover:bg-black/80">
             Watch Demo
           </Button>
         </motion.div>
