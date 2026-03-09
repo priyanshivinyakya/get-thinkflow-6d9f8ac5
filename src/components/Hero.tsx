@@ -37,7 +37,7 @@ const Hero = () => {
         >
           <source src="/hero-bg.mp4" type="video/mp4" />
         </video>
-        <div className="absolute inset-0 bg-black/45" />
+        <div className="absolute inset-0 bg-black/35" />
       </div>
 
       {/* Content */}
@@ -46,10 +46,10 @@ const Hero = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-          className="mb-8"
+          className="mb-6"
         >
-          <div className="flex items-center justify-center mb-10">
-            <img src={thinkflowLogo} alt="ThinkFlow" className="h-14 md:h-18 w-auto" />
+          <div className="flex items-center justify-center mb-8">
+            <img src={thinkflowLogo} alt="ThinkFlow" className="h-16 md:h-20 w-auto" />
           </div>
         </motion.div>
 
@@ -57,11 +57,8 @@ const Hero = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-          className="text-4xl md:text-6xl lg:text-7xl font-bold mb-[30px] tracking-[0.06em]"
-          style={{ 
-            fontFamily: "'Space Grotesk', sans-serif",
-            textShadow: '0 0 30px rgba(0, 200, 255, 0.35)' 
-          }}
+          className="font-display text-5xl md:text-7xl lg:text-8xl font-bold mb-4 tracking-wide"
+          style={{ textShadow: '0 0 20px rgba(0, 200, 255, 0.4)' }}
         >
           THINKFLOW
         </motion.h1>
@@ -70,8 +67,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-          className="text-xl md:text-2xl lg:text-3xl font-medium mb-[35px] tracking-[0.08em] text-muted-foreground"
-          style={{ fontFamily: "'Space Grotesk', sans-serif" }}
+          className="font-display text-2xl md:text-4xl lg:text-5xl font-medium mb-6 tracking-wide text-muted-foreground"
         >
           Not Everyone Automates
         </motion.h2>
@@ -80,7 +76,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
-          className="text-lg md:text-xl text-white mb-3 max-w-2xl mx-auto leading-relaxed"
+          className="text-lg md:text-xl text-white mb-4 max-w-3xl mx-auto"
         >
           The operating system for AI-driven businesses.
         </motion.p>
@@ -89,7 +85,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
-          className="text-base md:text-lg text-white/85 mb-[40px] max-w-xl mx-auto leading-relaxed"
+          className="text-base md:text-lg text-white/90 mb-10 max-w-2xl mx-auto"
         >
           Build, deploy, and scale intelligent workflows across your entire company.
         </motion.p>
@@ -98,9 +94,9 @@ const Hero = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6, ease: [0.16, 1, 0.3, 1] }}
-          className="flex justify-center mb-14"
+          className="flex justify-center mb-12"
         >
-          <Button size="lg" className="px-9 py-7 text-base font-semibold bg-[#00C2FF] hover:bg-[#00E5FF] text-black rounded-xl">
+          <Button size="lg" className="px-8 py-6 text-base font-medium bg-[#00C2FF] hover:bg-[#00E5FF] text-black">
             Request Access
           </Button>
         </motion.div>
