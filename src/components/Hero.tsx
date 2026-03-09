@@ -75,7 +75,7 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 0.6, ease: [0.16, 1, 0.3, 1] }}
           className="flex justify-center mb-12"
         >
-          <Button size="lg" className="px-8 py-6 text-base font-medium bg-[#00C2FF] hover:bg-[#00E5FF] text-black">
+          <Button size="lg" className="px-8 py-6 text-base font-medium bg-muted/40 hover:bg-muted/60 text-white border border-white/10 backdrop-blur-sm">
             Request Access
           </Button>
         </motion.div>
