@@ -35,28 +35,11 @@ const Navigation = () => {
             SERVICES
           </button>
           <button 
-            onClick={() => scrollToSection("standard")}
-            className="text-minimal text-muted-foreground hover:text-foreground transition-colors duration-300"
-          >
-            STANDARD
-          </button>
-          <button 
             onClick={() => scrollToSection("contact")}
             className="text-minimal text-muted-foreground hover:text-foreground transition-colors duration-300"
           >
             CONTACT
           </button>
-        </div>
-
-        <div className="hidden md:block">
-          <Button 
-            variant="outline" 
-            size="sm" 
-            className="text-minimal border-foreground hover:bg-foreground hover:text-background"
-            onClick={() => scrollToSection("contact")}
-          >
-            REQUEST ACCESS
-          </Button>
         </div>
 
         <Button
@@ -92,28 +75,11 @@ const Navigation = () => {
                 SERVICES
               </button>
               <button 
-                onClick={() => scrollToSection("standard")}
-                className="block text-minimal text-muted-foreground hover:text-foreground transition-colors duration-300"
-              >
-                STANDARD
-              </button>
-              <button 
                 onClick={() => scrollToSection("contact")}
                 className="block text-minimal text-muted-foreground hover:text-foreground transition-colors duration-300"
               >
                 CONTACT
               </button>
-              
-              <div className="pt-4 border-t border-border">
-                <Button 
-                  variant="outline" 
-                  size="sm" 
-                  className="text-minimal border-foreground w-full"
-                  onClick={() => scrollToSection("contact")}
-                >
-                  REQUEST ACCESS
-                </Button>
-              </div>
             </div>
           </motion.div>
         )}
