@@ -43,27 +43,59 @@ const Hero = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-          className="font-display text-4xl md:text-6xl lg:text-7xl font-bold mb-4 tracking-wide"
+          className="font-display text-5xl md:text-7xl lg:text-8xl font-bold mb-4 tracking-wide"
         >
-          THINKFLOW:
+          THINKFLOW
         </motion.h1>
 
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-          className="font-display text-3xl md:text-5xl lg:text-6xl font-bold mb-6 tracking-wide"
+          className="font-display text-2xl md:text-4xl lg:text-5xl font-medium mb-6 tracking-wide text-muted-foreground"
         >
-          NOT EVERYONE AUTOMATES
+          Not Everyone Automates
         </motion.h2>
 
         <motion.p
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
-          className="text-minimal text-muted-foreground mb-12 tracking-[0.3em]"
+          className="text-lg md:text-xl text-muted-foreground mb-4 max-w-3xl mx-auto"
         >
-          THE ELITE INFRASTRUCTURE FOR AUTONOMOUS ENTERPRISE.
+          The operating system for AI-driven businesses.
+        </motion.p>
+
+        <motion.p
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
+          className="text-base md:text-lg text-muted-foreground/80 mb-10 max-w-2xl mx-auto"
+        >
+          Build, deploy, and scale intelligent workflows across your entire company.
+        </motion.p>
+
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.6, ease: [0.16, 1, 0.3, 1] }}
+          className="flex flex-col sm:flex-row gap-4 justify-center mb-12"
+        >
+          <Button size="lg" className="px-8 py-6 text-base font-medium">
+            Request Access
+          </Button>
+          <Button variant="outline" size="lg" className="px-8 py-6 text-base font-medium border-white/20 hover:bg-white/10">
+            Watch Demo
+          </Button>
+        </motion.div>
+
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.8, delay: 0.8, ease: [0.16, 1, 0.3, 1] }}
+          className="text-sm text-muted-foreground/60 tracking-wide"
+        >
+          Trusted by AI-first teams and modern operators.
         </motion.p>
       </div>
     </section>
