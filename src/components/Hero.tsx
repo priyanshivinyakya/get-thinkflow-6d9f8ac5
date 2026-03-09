@@ -19,11 +19,11 @@ const Hero = () => {
           loop
           muted
           playsInline
-          className="absolute inset-0 w-full h-full object-cover"
+          className="absolute inset-0 w-full h-full object-cover blur-[2px]"
         >
           <source src="/hero-bg.mp4" type="video/mp4" />
         </video>
-        <div className="absolute inset-0 bg-black/80" />
+        <div className="absolute inset-0 bg-black/40" />
       </div>
 
       {/* Content */}
