@@ -35,7 +35,7 @@ const Hero = () => {
           className="mb-6"
         >
           <div className="flex items-center justify-center mb-8">
-            <img src={thinkflowLogo} alt="ThinkFlow" className="h-16 md:h-20 w-auto" />
+            <img src={thinkflowLogo} alt="ThinkFlow" className="w-auto" />
           </div>
         </motion.div>
 
