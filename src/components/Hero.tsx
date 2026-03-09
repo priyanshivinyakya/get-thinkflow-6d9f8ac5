@@ -1,8 +1,12 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import thinkflowLogo from "@/assets/thinkflow-logo.png";
+import heroBg from "@/assets/hero-architecture.jpg";
 
 const Hero = () => {
+  const [videoReady, setVideoReady] = useState(false);
+
   const scrollToContact = () => {
     const element = document.getElementById("contact");
     if (element) {
@@ -12,20 +16,32 @@ const Hero = () => {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
-      {/* Video Background */}
-      <div className="absolute inset-0 bg-black">
+      {/* Static fallback background (shows instantly) */}
+      <div
+        className="absolute inset-0 bg-cover bg-center"
+        style={{ backgroundImage: `url(${heroBg})` }}
+      />
+
+      {/* Video Background (fades in when ready) */}
+      <div
+        className="absolute inset-0 transition-opacity duration-700"
+        style={{ opacity: videoReady ? 1 : 0 }}
+      >
         <video
           autoPlay
           loop
           muted
           playsInline
           preload="auto"
+          onCanPlay={() => setVideoReady(true)}
           className="absolute inset-0 w-full h-full object-cover blur-[2px]"
         >
           <source src="/hero-bg.mp4" type="video/mp4" />
         </video>
-        <div className="absolute inset-0 bg-black/35" />
       </div>
+
+      {/* Dark overlay */}
+      <div className="absolute inset-0 bg-black/35" />
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-6 text-center pt-20">
