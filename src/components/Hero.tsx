@@ -80,13 +80,10 @@ const Hero = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6, ease: [0.16, 1, 0.3, 1] }}
-          className="flex flex-col sm:flex-row gap-4 justify-center mb-12"
+          className="flex justify-center mb-12"
         >
           <Button size="lg" className="px-8 py-6 text-base font-medium bg-[#00C2FF] hover:bg-[#00E5FF] text-black">
             Request Access
-          </Button>
-          <Button variant="outline" size="lg" className="px-8 py-6 text-base font-medium bg-black border-[#444] text-white hover:bg-black/80">
-            Watch Demo
           </Button>
         </motion.div>
 
