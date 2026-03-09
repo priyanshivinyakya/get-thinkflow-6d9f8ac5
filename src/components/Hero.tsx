@@ -1,8 +1,19 @@
 import { motion } from "framer-motion";
+import { useState, useRef, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import thinkflowLogo from "@/assets/thinkflow-logo.png";
 
 const Hero = () => {
+  const [videoLoaded, setVideoLoaded] = useState(false);
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (video && video.readyState >= 3) {
+      setVideoLoaded(true);
+    }
+  }, []);
+
   const scrollToContact = () => {
     const element = document.getElementById("contact");
     if (element) {
@@ -15,12 +26,14 @@ const Hero = () => {
       {/* Video Background */}
       <div className="absolute inset-0 bg-black">
         <video
+          ref={videoRef}
           autoPlay
           loop
           muted
           playsInline
           preload="auto"
-          className="absolute inset-0 w-full h-full object-cover blur-[2px]"
+          onLoadedData={() => setVideoLoaded(true)}
+          className={`absolute inset-0 w-full h-full object-cover blur-[2px] transition-opacity duration-700 ${videoLoaded ? 'opacity-100' : 'opacity-0'}`}
         >
           <source src="/hero-bg.mp4" type="video/mp4" />
         </video>
