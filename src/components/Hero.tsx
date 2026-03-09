@@ -11,14 +11,15 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-background">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
       {/* Video Background */}
-      <div className="absolute inset-0">
+      <div className="absolute inset-0 bg-black">
         <video
           autoPlay
           loop
           muted
           playsInline
+          preload="auto"
           className="absolute inset-0 w-full h-full object-cover blur-[2px]"
         >
           <source src="/hero-bg.mp4" type="video/mp4" />
