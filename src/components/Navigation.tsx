@@ -35,6 +35,12 @@ const Navigation = () => {
             SERVICES
           </button>
           <button 
+            onClick={() => scrollToSection("standard")}
+            className="text-minimal text-muted-foreground hover:text-foreground transition-colors duration-300"
+          >
+            STANDARD
+          </button>
+          <button 
             onClick={() => scrollToSection("contact")}
             className="text-minimal text-muted-foreground hover:text-foreground transition-colors duration-300"
           >
@@ -73,6 +79,12 @@ const Navigation = () => {
                 className="block text-minimal text-muted-foreground hover:text-foreground transition-colors duration-300"
               >
                 SERVICES
+              </button>
+              <button 
+                onClick={() => scrollToSection("standard")}
+                className="block text-minimal text-muted-foreground hover:text-foreground transition-colors duration-300"
+              >
+                STANDARD
               </button>
               <button 
                 onClick={() => scrollToSection("contact")}
