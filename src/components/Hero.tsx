@@ -32,7 +32,7 @@ const Hero = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-              className="font-display text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold tracking-wide text-foreground"
+              className="font-display text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold tracking-wide text-foreground"
               style={{ textShadow: '0 0 40px rgba(0, 194, 255, 0.3)' }}
             >
               THINKFLOW
