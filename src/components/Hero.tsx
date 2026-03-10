@@ -60,7 +60,7 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.35, ease: [0.16, 1, 0.3, 1] }}
-              className="text-muted-foreground text-sm md:text-base max-w-lg"
+              className="text-muted-foreground text-base md:text-lg max-w-lg"
             >
               Build, deploy, and scale intelligent workflows across your entire company.
             </motion.p>
@@ -90,7 +90,7 @@ const Hero = () => {
             </motion.p>
           </div>
 
-          {/* Right Content - Animated Robot */}
+          {/* Right Content - Robot Image */}
           <motion.div
             initial={{ opacity: 0, x: 40 }}
             animate={{ opacity: 1, x: 0 }}
@@ -98,40 +98,15 @@ const Hero = () => {
             className="relative flex justify-center lg:justify-end"
           >
             <div className="relative">
-              {/* Pulsing glow behind robot */}
-              <motion.div
-                animate={{
-                  scale: [1, 1.1, 1],
-                  opacity: [0.15, 0.3, 0.15],
-                }}
-                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute inset-0 rounded-full bg-[radial-gradient(circle,rgba(0,194,255,0.25)_0%,transparent_60%)] blur-2xl"
-              />
-
-              {/* Floating robot */}
-              <motion.img
+              <img
                 src={heroRobot}
                 alt="AI Robot"
-                animate={{ y: [0, -12, 0] }}
-                transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-                className="relative w-[350px] md:w-[450px] lg:w-[500px] xl:w-[550px] h-auto drop-shadow-[0_0_60px_rgba(0,194,255,0.2)]"
+                className="w-[350px] md:w-[450px] lg:w-[500px] xl:w-[550px] h-auto drop-shadow-[0_0_40px_rgba(0,194,255,0.15)]"
               />
-
-              {/* Horizontal scan line */}
-              <motion.div
-                animate={{ top: ["10%", "90%", "10%"] }}
-                transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#00C2FF]/40 to-transparent pointer-events-none"
-              />
-
-              {/* Floating info card */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: [0, -6, 0] }}
-                transition={{
-                  opacity: { duration: 0.7, delay: 0.7 },
-                  y: { duration: 4, repeat: Infinity, ease: "easeInOut", delay: 1 },
-                }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7, delay: 0.7, ease: [0.16, 1, 0.3, 1] }}
                 className="absolute top-8 -right-4 md:right-0 bg-card/80 backdrop-blur-md border border-border/50 rounded-lg p-4 max-w-[200px]"
               >
                 <div className="flex items-center gap-2 mb-2">
