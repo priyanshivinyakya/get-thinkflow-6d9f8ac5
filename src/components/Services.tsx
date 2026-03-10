@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
-import thinkflowLogo from "@/assets/thinkflow-logo.png";
+
 
 const Services = () => {
   const services = [
