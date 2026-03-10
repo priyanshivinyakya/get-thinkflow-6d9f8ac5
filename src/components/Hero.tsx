@@ -75,6 +75,7 @@ const Hero = () => {
                 size="lg"
                 variant="outline"
                 className="px-8 py-6 text-base font-medium border-foreground/30 hover:bg-foreground/10 text-foreground tracking-wider"
+                onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 Request Access
               </Button>
