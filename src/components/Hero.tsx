@@ -60,7 +60,7 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.35, ease: [0.16, 1, 0.3, 1] }}
-              className="text-muted-foreground text-base md:text-lg max-w-lg"
+              className="text-muted-foreground text-sm md:text-base max-w-lg"
             >
               Build, deploy, and scale intelligent workflows across your entire company.
             </motion.p>
