@@ -98,10 +98,23 @@ const Hero = () => {
             className="relative flex justify-center lg:justify-end"
           >
             <div className="relative">
-              <img
+              <motion.img
                 src={heroRobot}
                 alt="AI Robot"
                 className="w-[350px] md:w-[450px] lg:w-[500px] xl:w-[550px] h-auto drop-shadow-[0_0_40px_rgba(0,194,255,0.15)]"
+                animate={{
+                  y: [0, -12, 0],
+                  filter: [
+                    'drop-shadow(0 0 40px rgba(0,194,255,0.15))',
+                    'drop-shadow(0 0 60px rgba(0,194,255,0.3))',
+                    'drop-shadow(0 0 40px rgba(0,194,255,0.15))',
+                  ],
+                }}
+                transition={{
+                  duration: 4,
+                  repeat: Infinity,
+                  ease: 'easeInOut',
+                }}
               />
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
