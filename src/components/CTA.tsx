@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Button } from "@/components/ui/button";
 
 const CTA = () => {
   return (
@@ -15,9 +16,17 @@ const CTA = () => {
           <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold mb-8 tracking-tight">
             See What You Can Automate
           </h2>
-          <p className="text-muted-foreground text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
+          <p className="text-muted-foreground text-lg md:text-xl max-w-2xl mx-auto leading-relaxed mb-10">
             We don't take clients. We select partners. Currently accepting two new firms for Q1 2026.
           </p>
+          <Button
+            size="lg"
+            variant="outline"
+            className="px-8 py-6 text-base font-medium border-foreground/30 hover:bg-foreground/10 text-foreground tracking-wider"
+            onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+          >
+            Get Automation Access
+          </Button>
         </motion.div>
       </div>
     </section>
