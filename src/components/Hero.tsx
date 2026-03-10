@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import thinkflowLogo from "@/assets/thinkflow-logo.png";
 import heroRobot from "@/assets/hero-robot.png";
 
 const Hero = () => {
@@ -18,13 +17,9 @@ const Hero = () => {
             backgroundSize: '80px 80px',
           }}
         />
-        {/* Radial glow */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full bg-[radial-gradient(circle,rgba(0,194,255,0.08)_0%,transparent_70%)]" />
-        {/* Corner accent lines */}
         <div className="absolute top-0 right-0 w-[400px] h-[400px] opacity-10"
-          style={{
-            background: 'linear-gradient(225deg, rgba(0,194,255,0.2) 0%, transparent 60%)',
-          }}
+          style={{ background: 'linear-gradient(225deg, rgba(0,194,255,0.2) 0%, transparent 60%)' }}
         />
       </div>
 
@@ -32,41 +27,49 @@ const Hero = () => {
       <div className="relative z-10 container mx-auto px-6 pt-24 pb-16">
         <div className="grid lg:grid-cols-2 gap-8 items-center">
           {/* Left Content */}
-          <div className="space-y-6">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-            >
-              <img src={thinkflowLogo} alt="ThinkFlow" className="h-12 md:h-14 w-auto mb-4" />
-            </motion.div>
-
+          <div className="space-y-5">
             <motion.h1
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
+              transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
               className="font-display text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold tracking-wide text-foreground"
               style={{ textShadow: '0 0 40px rgba(0, 194, 255, 0.3)' }}
             >
-              THINK
-              <br />
-              FLOW
+              THINKFLOW
             </motion.h1>
+
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
+              className="font-display text-2xl md:text-3xl lg:text-4xl font-medium text-muted-foreground tracking-wide"
+            >
+              Not Everyone Automates
+            </motion.h2>
 
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-              className="text-muted-foreground text-base md:text-lg max-w-md leading-relaxed"
+              transition={{ duration: 0.7, delay: 0.25, ease: [0.16, 1, 0.3, 1] }}
+              className="text-foreground text-base md:text-lg max-w-lg"
             >
-              ThinkFlow is an advanced AI-powered automation platform engineered for precision, adaptability, and seamless integration into daily life and industrial workflows.
+              The operating system for AI-driven businesses.
+            </motion.p>
+
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.35, ease: [0.16, 1, 0.3, 1] }}
+              className="text-muted-foreground text-base md:text-lg max-w-lg"
+            >
+              Build, deploy, and scale intelligent workflows across your entire company.
             </motion.p>
 
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.45, ease: [0.16, 1, 0.3, 1] }}
-              className="pt-4"
+              className="pt-2"
             >
               <Button
                 size="lg"
@@ -76,6 +79,15 @@ const Hero = () => {
                 Request Access
               </Button>
             </motion.div>
+
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.7, delay: 0.6, ease: [0.16, 1, 0.3, 1] }}
+              className="text-sm text-muted-foreground/60 tracking-wide pt-4"
+            >
+              Trusted by AI-first teams and modern operators.
+            </motion.p>
           </div>
 
           {/* Right Content - Robot Image */}
@@ -91,7 +103,6 @@ const Hero = () => {
                 alt="AI Robot"
                 className="w-[350px] md:w-[450px] lg:w-[500px] xl:w-[550px] h-auto drop-shadow-[0_0_40px_rgba(0,194,255,0.15)]"
               />
-              {/* Floating info card */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -111,7 +122,6 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Bottom border accent */}
       <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#00C2FF]/20 to-transparent" />
     </section>
   );
