@@ -42,7 +42,8 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
-              className="font-display text-xl md:text-2xl lg:text-3xl font-medium text-muted-foreground tracking-wide"
+              className="font-display text-xl md:text-2xl lg:text-3xl font-medium tracking-wide"
+              style={{ color: '#E5E7EB' }}
             >
               Not Everyone Automates
             </motion.h2>
@@ -60,7 +61,7 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.35, ease: [0.16, 1, 0.3, 1] }}
-              className="text-muted-foreground text-sm md:text-base max-w-lg"
+              className="text-muted-foreground text-sm md:text-base max-w-[600px]"
             >
               Build, deploy, and scale intelligent workflows across your entire company.
             </motion.p>
@@ -74,7 +75,8 @@ const Hero = () => {
               <Button
                 size="lg"
                 variant="outline"
-                className="px-8 py-6 text-base font-medium border-foreground/30 hover:bg-foreground/10 text-foreground tracking-wider"
+                className="px-8 py-6 text-base font-medium text-foreground tracking-wider"
+                style={{ background: '#0F172A', border: '1px solid #334155' }}
                 onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 Get Automation Access
