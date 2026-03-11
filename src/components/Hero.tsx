@@ -75,7 +75,8 @@ const Hero = () => {
               <Button
                 size="lg"
                 variant="outline"
-                className="px-8 py-6 text-base font-medium border-foreground/30 hover:bg-foreground/10 text-foreground tracking-wider"
+                className="px-8 py-6 text-base font-medium text-foreground tracking-wider"
+                style={{ background: '#0F172A', border: '1px solid #334155' }}
                 onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 Get Automation Access
