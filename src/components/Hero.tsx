@@ -42,7 +42,8 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
-              className="font-display text-xl md:text-2xl lg:text-3xl font-medium text-muted-foreground tracking-wide"
+              className="font-display text-xl md:text-2xl lg:text-3xl font-medium tracking-wide"
+              style={{ color: '#E5E7EB' }}
             >
               Not Everyone Automates
             </motion.h2>
