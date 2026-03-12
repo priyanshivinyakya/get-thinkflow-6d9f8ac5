@@ -72,15 +72,25 @@ const Hero = () => {
               transition={{ duration: 0.7, delay: 0.45, ease: [0.16, 1, 0.3, 1] }}
               className="pt-2"
             >
-              <Button
-                size="lg"
-                variant="outline"
-                className="px-8 py-6 text-base font-medium text-foreground tracking-wider"
-                style={{ background: '#0F172A', border: '1px solid #334155' }}
-                onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-              >
-                Get Automation Access
-              </Button>
+              <div className="flex flex-wrap gap-4">
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="px-8 py-6 text-base font-medium text-foreground tracking-wider"
+                  style={{ background: '#0F172A', border: '1px solid #334155' }}
+                  onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+                >
+                  Get Automation Access
+                </Button>
+                <Button
+                  size="lg"
+                  variant="ghost"
+                  className="px-8 py-6 text-base font-medium text-foreground tracking-wider border border-muted-foreground/30 hover:border-foreground"
+                  onClick={() => document.getElementById('standard')?.scrollIntoView({ behavior: 'smooth' })}
+                >
+                  Audit Your Workflow →
+                </Button>
+              </div>
             </motion.div>
 
             <motion.p

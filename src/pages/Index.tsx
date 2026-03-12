@@ -9,6 +9,7 @@ import Founder from "@/components/Founder";
 import CTA from "@/components/CTA";
 import Contact from "@/components/Contact";
 import AIBotButton from "@/components/AIBotButton";
+import ExitIntentModal from "@/components/ExitIntentModal";
 
 const Index = () => {
   return (
@@ -25,6 +26,7 @@ const Index = () => {
       
       <Contact />
       <AIBotButton />
+      <ExitIntentModal />
     </div>
   );
 };
