@@ -26,6 +26,7 @@ const Index = () => {
       
       <Contact />
       <AIBotButton />
+      <ExitIntentModal />
     </div>
   );
 };
