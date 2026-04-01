@@ -90,6 +90,9 @@ const Footer = () => {
           <p className="text-muted-foreground text-sm">
             © 2026 ThinkFlow. From Chaos → Execution.
           </p>
+          <p className="text-muted-foreground/50 text-xs">
+            Built by Priyanshi 💡
+          </p>
         </div>
       </div>
     </footer>
