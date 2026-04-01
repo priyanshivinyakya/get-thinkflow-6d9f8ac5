@@ -1,4 +1,4 @@
-import { Mail, Linkedin, Twitter } from "lucide-react";
+import { Mail, Linkedin } from "lucide-react";
 
 const Footer = () => {
   const scrollToSection = (id: string) => {
