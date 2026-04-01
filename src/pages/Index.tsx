@@ -8,6 +8,7 @@ import Stats from "@/components/Stats";
 import Founder from "@/components/Founder";
 import CTA from "@/components/CTA";
 import Contact from "@/components/Contact";
+import Footer from "@/components/Footer";
 import AIBotButton from "@/components/AIBotButton";
 import ExitIntentModal from "@/components/ExitIntentModal";
 
@@ -23,8 +24,8 @@ const Index = () => {
       <Stats />
       <CTA />
       <Founder />
-      
       <Contact />
+      <Footer />
       <AIBotButton />
       <ExitIntentModal />
     </div>
