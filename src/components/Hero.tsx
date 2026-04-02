@@ -1,8 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { useEffect, useRef } from "react";
-
-// Simple particle animation on canvas
+import heroBg from "@/assets/hero-bg.png";
 const ParticleBackground = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
