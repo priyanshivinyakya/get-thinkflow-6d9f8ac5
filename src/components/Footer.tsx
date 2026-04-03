@@ -1,4 +1,4 @@
-import { Mail, Linkedin } from "lucide-react";
+import { Mail, Linkedin, Github } from "lucide-react";
 
 const Footer = () => {
   const scrollToSection = (id: string) => {
@@ -18,6 +18,7 @@ const Footer = () => {
   const socials = [
     { icon: Mail, href: "mailto:priyanshivinyakya@gmail.com", label: "Email" },
     { icon: Linkedin, href: "https://linkedin.com/in/priyanshivinyakya", label: "LinkedIn" },
+    { icon: Github, href: "https://github.com/priyanshivinyakya", label: "GitHub" },
   ];
 
   return (
