@@ -8,7 +8,7 @@ const Hero = () => {
       {/* Grid Background - subtle */}
       <div className="absolute inset-0">
         <div
-          className="absolute inset-0 opacity-[0.03]"
+          className="absolute inset-0 opacity-[0.015]"
           style={{
             backgroundImage: `
               linear-gradient(rgba(0, 194, 255, 0.2) 1px, transparent 1px),
