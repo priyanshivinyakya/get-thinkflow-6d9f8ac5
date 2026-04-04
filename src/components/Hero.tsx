@@ -148,12 +148,12 @@ const Hero = () => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 1, delay: 0.9 }}
-                className="absolute top-[110px] md:top-[120px] left-[60px] md:left-[70px] w-[60px] h-[60px]"
-                viewBox="0 0 60 60"
+                className="absolute top-[100px] md:top-[110px] left-[40px] md:left-[50px] w-[200px] md:w-[220px] h-[120px] md:h-[130px]"
+                viewBox="0 0 220 130"
                 fill="none"
               >
                 <motion.path
-                  d="M0 0 L0 30 Q0 50 20 50 L60 50"
+                  d="M0 0 L0 60 Q0 90 30 90 L220 90 L220 130"
                   stroke="rgba(0,194,255,0.2)"
                   strokeWidth="1"
                   fill="none"
