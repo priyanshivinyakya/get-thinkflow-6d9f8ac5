@@ -43,10 +43,10 @@ const Contact = () => {
             <div>
               <h3 className="text-minimal text-primary tracking-[0.2em] mb-2">EMAIL</h3>
               <a
-                href="mailto:priyanshivinyakya@gmail.com"
+                href="mailto:thinkflow.ai@proton.me"
                 className="text-xl hover:text-muted-foreground transition-colors"
               >
-                priyanshivinyakya@gmail.com
+                thinkflow.ai@proton.me
               </a>
             </div>
             
