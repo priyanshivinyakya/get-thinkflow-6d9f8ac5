@@ -17,6 +17,7 @@ const Footer = () => {
 
   const socials = [
     { icon: Mail, href: "mailto:thinkflow.ai@proton.me", label: "Email" },
+    { icon: Mail, href: "mailto:priyanshivinyakya@gmail.com", label: "Gmail" },
     { icon: Linkedin, href: "https://linkedin.com/in/priyanshivinyakya", label: "LinkedIn" },
     { icon: Github, href: "https://github.com/priyanshivinyakya", label: "GitHub" },
   ];
