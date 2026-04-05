@@ -126,7 +126,7 @@ const Hero = () => {
               >
                 <motion.div
                   animate={{ y: [0, -5, 0] }}
-                  transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+                  transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
                   className="rounded-xl border border-[rgba(0,194,255,0.15)] bg-[rgba(10,20,40,0.6)] backdrop-blur-xl p-5 w-[240px] md:w-[270px]"
                 >
                   <div className="flex items-center gap-3 mb-3">
@@ -171,7 +171,7 @@ const Hero = () => {
               >
                 <motion.div
                   animate={{ y: [0, -4, 0] }}
-                  transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+                  transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
                   className="rounded-xl border border-[rgba(0,194,255,0.15)] bg-[rgba(10,20,40,0.6)] backdrop-blur-xl p-5 w-[220px] md:w-[250px]"
                 >
                   <div className="flex items-center gap-3 mb-3">
