@@ -58,7 +58,7 @@ const Hero = () => {
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-              className="text-muted-foreground text-base md:text-lg max-w-lg mt-5"
+              className="text-muted-foreground text-sm md:text-base max-w-lg mt-5 leading-relaxed"
             >
               The operating system for AI-driven businesses. Build, deploy, and scale intelligent workflows across your entire company.
             </motion.p>
@@ -72,18 +72,17 @@ const Hero = () => {
               <div className="flex flex-wrap gap-4">
                 <Button
                   size="lg"
-                  className="px-8 py-6 text-base font-medium tracking-wider text-white relative overflow-hidden transition-all duration-300"
+                  className="px-8 py-6 text-base font-medium tracking-wider bg-white text-black hover:bg-white/90 transition-all duration-300"
                   style={{
-                    background: 'linear-gradient(135deg, rgba(0,194,255,0.9) 0%, rgba(0,150,220,0.9) 100%)',
-                    boxShadow: '0 0 20px rgba(0,194,255,0.25), 0 4px 15px rgba(0,0,0,0.3)',
+                    boxShadow: '0 0 20px rgba(255,255,255,0.15), 0 4px 15px rgba(0,0,0,0.3)',
                   }}
                   onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
                   onMouseEnter={(e) => {
-                    e.currentTarget.style.boxShadow = '0 0 35px rgba(0,194,255,0.4), 0 4px 20px rgba(0,0,0,0.4)';
+                    e.currentTarget.style.boxShadow = '0 0 35px rgba(255,255,255,0.25), 0 4px 20px rgba(0,0,0,0.4)';
                     e.currentTarget.style.transform = 'translateY(-2px)';
                   }}
                   onMouseLeave={(e) => {
-                    e.currentTarget.style.boxShadow = '0 0 20px rgba(0,194,255,0.25), 0 4px 15px rgba(0,0,0,0.3)';
+                    e.currentTarget.style.boxShadow = '0 0 20px rgba(255,255,255,0.15), 0 4px 15px rgba(0,0,0,0.3)';
                     e.currentTarget.style.transform = 'translateY(0)';
                   }}
                 >
