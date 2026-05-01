@@ -51,7 +51,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-          className="mb-5 text-xs md:text-sm uppercase tracking-[0.3em] text-muted-foreground/70"
+          className="mb-5 text-base md:text-xl uppercase tracking-[0.3em] text-muted-foreground/80"
         >
           ThinkFlow presents
         </motion.p>
@@ -61,7 +61,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-          className="font-display text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-foreground leading-[1.05] whitespace-nowrap"
+          className="font-display text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-foreground leading-[1.05] whitespace-nowrap"
           style={{ textShadow: '0 0 60px rgba(255,255,255,0.08)' }}
         >
           Not everyone automates.
