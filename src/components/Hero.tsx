@@ -15,10 +15,10 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#0B0B0B] pt-24 pb-16">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#0B0B0B] pt-24 pb-24">
       {/* Subtle grain texture */}
       <div
-        className="absolute inset-0 opacity-[0.04] pointer-events-none mix-blend-overlay"
+        className="absolute inset-0 opacity-[0.05] pointer-events-none mix-blend-overlay"
         style={{
           backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")`,
         }}
@@ -36,52 +36,54 @@ const Hero = () => {
         }}
       />
 
-      {/* Soft glow behind video */}
-      <div
-        className="absolute left-1/2 top-[65%] -translate-x-1/2 -translate-y-1/2 w-[80%] max-w-[900px] h-[420px] rounded-full pointer-events-none"
+      {/* Pulsing glow behind video */}
+      <motion.div
+        className="absolute left-1/2 top-[70%] -translate-x-1/2 -translate-y-1/2 w-[90%] max-w-[1200px] h-[560px] rounded-full pointer-events-none"
         style={{
-          background: 'radial-gradient(closest-side, rgba(0,194,255,0.18), rgba(0,194,255,0.05) 50%, transparent 75%)',
-          filter: 'blur(40px)',
+          background: 'radial-gradient(closest-side, rgba(0,194,255,0.28), rgba(0,194,255,0.08) 50%, transparent 75%)',
+          filter: 'blur(60px)',
         }}
+        animate={{ opacity: [0.7, 1, 0.7], scale: [1, 1.05, 1] }}
+        transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
       />
 
       <div className="relative z-10 container mx-auto px-6 md:px-10 flex flex-col items-center text-center">
-        {/* Eyebrow */}
+        {/* 1. Brand fade in */}
         <motion.p
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-          className="mb-5 text-base md:text-xl uppercase tracking-[0.3em] text-muted-foreground/80"
+          initial={{ opacity: 0, y: 8, letterSpacing: "0.5em" }}
+          animate={{ opacity: 1, y: 0, letterSpacing: "0.3em" }}
+          transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
+          className="mb-6 text-base md:text-xl uppercase text-muted-foreground/80"
         >
           ThinkFlow presents
         </motion.p>
 
-        {/* Headline */}
+        {/* 2. Headline slide up */}
         <motion.h1
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
+          transition={{ duration: 1, delay: 0.6, ease: [0.16, 1, 0.3, 1] }}
           className="font-display text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-foreground leading-[1.05] whitespace-nowrap"
-          style={{ textShadow: '0 0 60px rgba(255,255,255,0.08)' }}
+          style={{ textShadow: '0 0 60px rgba(255,255,255,0.1)' }}
         >
           Not everyone automates.
         </motion.h1>
 
-        {/* Subtext */}
+        {/* 3. Subtext fade */}
         <motion.p
-          initial={{ opacity: 0, y: 15 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1.2, delay: 1.2, ease: "easeOut" }}
           className="mt-6 max-w-2xl text-sm md:text-base text-muted-foreground leading-relaxed"
         >
           ThinkFlow transforms manual workflows into intelligent, automated systems — so your business runs faster, smarter, and without chaos.
         </motion.p>
 
-        {/* CTA Buttons */}
+        {/* 4. CTA Buttons pop in */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
+          initial={{ opacity: 0, y: 30, scale: 0.9 }}
+          animate={{ opacity: 1, y: 0, scale: 1 }}
+          transition={{ duration: 0.7, delay: 1.8, ease: [0.34, 1.56, 0.64, 1] }}
           className="mt-8 flex flex-wrap items-center justify-center gap-4"
         >
           <Button
@@ -106,24 +108,45 @@ const Hero = () => {
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 0.8, delay: 0.5 }}
+          transition={{ duration: 0.8, delay: 2.1 }}
           className="mt-5 text-xs md:text-sm text-muted-foreground/60 tracking-wide"
         >
           No code. No complexity. Just smarter workflows.
         </motion.p>
 
-        {/* Demo Video */}
+        {/* Tagline above video */}
+        <motion.p
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.9, delay: 2.5, ease: [0.16, 1, 0.3, 1] }}
+          className="mt-16 text-sm md:text-base uppercase tracking-[0.25em] text-foreground/70"
+        >
+          Built for teams that don't scale manually
+        </motion.p>
+
+        {/* 5. Video delayed reveal with glow */}
         <motion.div
           id="demo-video"
-          initial={{ opacity: 0, y: 30, scale: 0.97 }}
+          initial={{ opacity: 0, y: 50, scale: 0.92 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
-          transition={{ duration: 1, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
-          className="relative mt-14 w-full max-w-5xl group"
+          transition={{ duration: 1.4, delay: 2.8, ease: [0.16, 1, 0.3, 1] }}
+          className="relative mt-8 w-full max-w-7xl group"
         >
-          <div
-            className="relative rounded-2xl overflow-hidden border border-white/10 bg-black transition-transform duration-500 ease-out group-hover:scale-[1.015]"
+          <motion.div
+            aria-hidden
+            className="absolute -inset-10 rounded-[2rem] pointer-events-none"
             style={{
-              boxShadow: '0 30px 80px -20px rgba(0,0,0,0.7), 0 0 60px rgba(0,194,255,0.08)',
+              background: 'radial-gradient(closest-side, rgba(0,194,255,0.35), rgba(0,194,255,0.08) 60%, transparent 80%)',
+              filter: 'blur(50px)',
+            }}
+            animate={{ opacity: [0.6, 0.95, 0.6] }}
+            transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+          />
+
+          <div
+            className="relative rounded-2xl overflow-hidden border border-white/10 bg-black transition-transform duration-700 ease-out group-hover:scale-[1.025]"
+            style={{
+              boxShadow: '0 40px 100px -20px rgba(0,0,0,0.8), 0 0 80px rgba(0,194,255,0.15)',
             }}
           >
             <video
