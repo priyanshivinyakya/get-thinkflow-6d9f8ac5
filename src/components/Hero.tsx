@@ -46,12 +46,22 @@ const Hero = () => {
       />
 
       <div className="relative z-10 container mx-auto px-6 md:px-10 flex flex-col items-center text-center">
+        {/* Eyebrow */}
+        <motion.p
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+          className="mb-5 text-xs md:text-sm uppercase tracking-[0.3em] text-muted-foreground/70"
+        >
+          ThinkFlow presents
+        </motion.p>
+
         {/* Headline */}
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-          className="font-display text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-foreground leading-[1.05]"
+          transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
+          className="font-display text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-foreground leading-[1.05] whitespace-nowrap"
           style={{ textShadow: '0 0 60px rgba(255,255,255,0.08)' }}
         >
           Not everyone automates.
