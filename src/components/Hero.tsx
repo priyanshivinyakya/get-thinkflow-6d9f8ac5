@@ -1,195 +1,151 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Brain, CheckCircle } from "lucide-react";
+import { useRef, useState } from "react";
+import { Play } from "lucide-react";
 
 const Hero = () => {
-  return (
-    <section className="relative min-h-screen flex items-center overflow-hidden bg-background">
-      {/* Grid Background - subtle */}
-      <div className="absolute inset-0">
-        <div
-          className="absolute inset-0 opacity-[0.015]"
-          style={{
-            backgroundImage: `
-              linear-gradient(rgba(0, 194, 255, 0.2) 1px, transparent 1px),
-              linear-gradient(90deg, rgba(0, 194, 255, 0.2) 1px, transparent 1px)
-            `,
-            backgroundSize: '80px 80px',
-          }}
-        />
-      </div>
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [isPlaying, setIsPlaying] = useState(true);
 
-      {/* Single premium touch: slow-moving gradient line */}
-      <motion.div
-        className="absolute top-1/2 left-0 right-0 h-[1px]"
+  const handlePlay = () => {
+    if (videoRef.current) {
+      videoRef.current.play();
+      setIsPlaying(true);
+    }
+  };
+
+  return (
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#0B0B0B] pt-24 pb-16">
+      {/* Subtle grain texture */}
+      <div
+        className="absolute inset-0 opacity-[0.04] pointer-events-none mix-blend-overlay"
         style={{
-          background: 'linear-gradient(90deg, transparent 0%, rgba(0,194,255,0.15) 50%, transparent 100%)',
-          backgroundSize: '200% 100%',
+          backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")`,
         }}
-        animate={{ backgroundPosition: ['200% 0', '-200% 0'] }}
-        transition={{ duration: 12, repeat: Infinity, ease: "linear" }}
       />
 
-      {/* Content */}
-      <div className="relative z-10 container mx-auto px-8 md:px-12 lg:px-16 pt-24 pb-16">
-        <div className="grid lg:grid-cols-[1fr_0.8fr] gap-0 items-center">
-          {/* Left Content */}
-          <div className="text-left">
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-              className="font-display text-3xl md:text-4xl lg:text-5xl font-bold tracking-wide text-foreground/80"
-            >
-              THINKFLOW
-            </motion.h1>
+      {/* Faint grid */}
+      <div
+        className="absolute inset-0 opacity-[0.015] pointer-events-none"
+        style={{
+          backgroundImage: `
+            linear-gradient(rgba(255,255,255,0.4) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(255,255,255,0.4) 1px, transparent 1px)
+          `,
+          backgroundSize: '80px 80px',
+        }}
+      />
 
-            <motion.h2
-              initial={{ opacity: 0, y: 15 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-              className="font-display text-2xl md:text-3xl lg:text-4xl font-semibold tracking-wide mt-2 text-foreground"
-              style={{ textShadow: '0 0 40px rgba(0, 194, 255, 0.15)' }}
-            >
-              Not Everyone Automates
-            </motion.h2>
+      {/* Soft glow behind video */}
+      <div
+        className="absolute left-1/2 top-[65%] -translate-x-1/2 -translate-y-1/2 w-[80%] max-w-[900px] h-[420px] rounded-full pointer-events-none"
+        style={{
+          background: 'radial-gradient(closest-side, rgba(0,194,255,0.18), rgba(0,194,255,0.05) 50%, transparent 75%)',
+          filter: 'blur(40px)',
+        }}
+      />
 
-            <motion.p
-              initial={{ opacity: 0, y: 15 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-              className="text-muted-foreground text-sm md:text-base max-w-lg mt-5 leading-relaxed"
-            >
-              The operating system for AI-driven businesses. Build, deploy, and scale intelligent workflows across your entire company.
-            </motion.p>
+      <div className="relative z-10 container mx-auto px-6 md:px-10 flex flex-col items-center text-center">
+        {/* Headline */}
+        <motion.h1
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+          className="font-display text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-foreground leading-[1.05]"
+          style={{ textShadow: '0 0 60px rgba(255,255,255,0.08)' }}
+        >
+          Not everyone automates.
+        </motion.h1>
 
-            <motion.div
-              initial={{ opacity: 0, y: 15 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-              className="mt-8"
-            >
-              <div className="flex flex-wrap gap-4">
-                <Button
-                  size="lg"
-                  className="px-8 py-6 text-base font-medium tracking-wider bg-white text-black hover:bg-white/90 transition-all duration-300"
-                  style={{
-                    boxShadow: '0 0 20px rgba(255,255,255,0.15), 0 4px 15px rgba(0,0,0,0.3)',
-                  }}
-                  onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.boxShadow = '0 0 35px rgba(255,255,255,0.25), 0 4px 20px rgba(0,0,0,0.4)';
-                    e.currentTarget.style.transform = 'translateY(-2px)';
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.boxShadow = '0 0 20px rgba(255,255,255,0.15), 0 4px 15px rgba(0,0,0,0.3)';
-                    e.currentTarget.style.transform = 'translateY(0)';
-                  }}
-                >
-                  Get Automation Access
-                </Button>
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="px-8 py-6 text-base font-medium text-foreground tracking-wider border-muted-foreground/30 hover:border-foreground/60 hover:bg-muted/10 transition-all duration-300"
-                  onClick={() => document.getElementById('standard')?.scrollIntoView({ behavior: 'smooth' })}
-                >
-                  Audit Your Workflow →
-                </Button>
-              </div>
-            </motion.div>
+        {/* Subtext */}
+        <motion.p
+          initial={{ opacity: 0, y: 15 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
+          className="mt-6 max-w-2xl text-sm md:text-base text-muted-foreground leading-relaxed"
+        >
+          ThinkFlow transforms manual workflows into intelligent, automated systems — so your business runs faster, smarter, and without chaos.
+        </motion.p>
 
-            <motion.p
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.7, delay: 0.5 }}
-              className="text-sm text-muted-foreground/50 tracking-wide mt-5"
-            >
-              Trusted by AI-first teams and modern operators.
-            </motion.p>
-          </div>
-
-          {/* Right Content - simplified to 2 cards, closer */}
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 1, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-            className="relative flex justify-center lg:justify-start"
+        {/* CTA Buttons */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
+          className="mt-8 flex flex-wrap items-center justify-center gap-4"
+        >
+          <Button
+            size="lg"
+            className="px-8 py-6 text-base font-medium tracking-wide bg-white text-black hover:bg-white/90 rounded-full transition-all duration-300"
+            style={{ boxShadow: '0 0 25px rgba(255,255,255,0.18), 0 4px 18px rgba(0,0,0,0.4)' }}
+            onClick={() => document.getElementById('demo-video')?.scrollIntoView({ behavior: 'smooth', block: 'center' })}
           >
-            <div className="relative w-[280px] md:w-[320px] h-[300px] md:h-[340px]">
-              {/* AI Automation Card */}
-              <motion.div
-                initial={{ opacity: 0, y: 15 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.5 }}
-                className="absolute top-0 left-0"
-              >
-                <motion.div
-                  animate={{ y: [0, -5, 0] }}
-                  transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-                  className="rounded-xl border border-[rgba(0,194,255,0.15)] bg-[rgba(10,20,40,0.6)] backdrop-blur-xl p-5 w-[240px] md:w-[270px]"
-                >
-                  <div className="flex items-center gap-3 mb-3">
-                    <div className="w-10 h-10 rounded-lg bg-[rgba(0,194,255,0.08)] border border-[rgba(0,194,255,0.2)] flex items-center justify-center">
-                      <Brain className="w-5 h-5 text-[#00C2FF]" />
-                    </div>
-                    <span className="text-sm font-semibold text-foreground">AI Automation</span>
-                  </div>
-                  <div className="space-y-2">
-                    <div className="h-2 w-full rounded-full bg-muted/20" />
-                    <div className="h-2 w-3/4 rounded-full bg-muted/15" />
-                  </div>
-                </motion.div>
-              </motion.div>
+            See it in action
+          </Button>
+          <Button
+            size="lg"
+            variant="outline"
+            className="px-8 py-6 text-base font-medium tracking-wide rounded-full border-muted-foreground/30 text-foreground hover:border-foreground/60 hover:bg-white/5 transition-all duration-300"
+            onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+          >
+            Audit your workflow
+          </Button>
+        </motion.div>
 
-              {/* Connector Line */}
-              <motion.svg
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 1, delay: 0.9 }}
-                className="absolute top-[100px] md:top-[110px] left-[40px] md:left-[50px] w-[200px] md:w-[220px] h-[120px] md:h-[130px]"
-                viewBox="0 0 220 130"
-                fill="none"
-              >
-                <motion.path
-                  d="M0 0 L0 60 Q0 90 30 90 L220 90 L220 130"
-                  stroke="rgba(0,194,255,0.2)"
-                  strokeWidth="1"
-                  fill="none"
-                  initial={{ pathLength: 0 }}
-                  animate={{ pathLength: 1 }}
-                  transition={{ duration: 2, delay: 0.9 }}
-                />
-              </motion.svg>
+        {/* Trust line */}
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.8, delay: 0.5 }}
+          className="mt-5 text-xs md:text-sm text-muted-foreground/60 tracking-wide"
+        >
+          No code. No complexity. Just smarter workflows.
+        </motion.p>
 
-              {/* Task Completed Card */}
-              <motion.div
-                initial={{ opacity: 0, y: 15 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.8 }}
-                className="absolute bottom-0 right-0"
+        {/* Demo Video */}
+        <motion.div
+          id="demo-video"
+          initial={{ opacity: 0, y: 30, scale: 0.97 }}
+          animate={{ opacity: 1, y: 0, scale: 1 }}
+          transition={{ duration: 1, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
+          className="relative mt-14 w-full max-w-5xl group"
+        >
+          <div
+            className="relative rounded-2xl overflow-hidden border border-white/10 bg-black transition-transform duration-500 ease-out group-hover:scale-[1.015]"
+            style={{
+              boxShadow: '0 30px 80px -20px rgba(0,0,0,0.7), 0 0 60px rgba(0,194,255,0.08)',
+            }}
+          >
+            <video
+              ref={videoRef}
+              className="w-full h-auto block aspect-video object-cover"
+              autoPlay
+              muted
+              loop
+              playsInline
+              poster="/placeholder.svg"
+              onPlay={() => setIsPlaying(true)}
+              onPause={() => setIsPlaying(false)}
+            >
+              <source src="/demo.mp4" type="video/mp4" />
+            </video>
+
+            {!isPlaying && (
+              <button
+                onClick={handlePlay}
+                aria-label="Play demo video"
+                className="absolute inset-0 flex items-center justify-center bg-black/30 backdrop-blur-sm transition-opacity"
               >
-                <motion.div
-                  animate={{ y: [0, -4, 0] }}
-                  transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
-                  className="rounded-xl border border-[rgba(0,194,255,0.15)] bg-[rgba(10,20,40,0.6)] backdrop-blur-xl p-5 w-[220px] md:w-[250px]"
-                >
-                  <div className="flex items-center gap-3 mb-3">
-                    <CheckCircle className="w-5 h-5 text-[#00C2FF]/70" />
-                    <span className="text-sm font-semibold text-foreground">Task Completed</span>
-                  </div>
-                  <div className="space-y-2">
-                    <div className="h-2 w-full rounded-full bg-muted/20" />
-                    <div className="h-2 w-1/2 rounded-full bg-muted/15" />
-                  </div>
-                </motion.div>
-              </motion.div>
-            </div>
-          </motion.div>
-        </div>
+                <span className="w-20 h-20 rounded-full bg-white/95 text-black flex items-center justify-center shadow-2xl transition-transform hover:scale-110">
+                  <Play className="w-8 h-8 ml-1" fill="currentColor" />
+                </span>
+              </button>
+            )}
+          </div>
+        </motion.div>
       </div>
 
-      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#00C2FF]/10 to-transparent" />
+      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
     </section>
   );
 };
