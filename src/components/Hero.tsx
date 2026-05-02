@@ -53,7 +53,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 8, letterSpacing: "0.5em" }}
           animate={{ opacity: 1, y: 0, letterSpacing: "0.3em" }}
           transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-          className="mb-6 text-base md:text-xl uppercase text-muted-foreground/80"
+          className="mb-6 text-sm md:text-base uppercase text-muted-foreground/80"
         >
           ThinkFlow presents
         </motion.p>
