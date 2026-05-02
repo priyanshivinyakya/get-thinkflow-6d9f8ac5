@@ -1,4 +1,38 @@
 import { motion } from "framer-motion";
+import { Bot, MousePointerClick, Clock, Settings2, Rocket, TrendingUp } from "lucide-react";
+
+const features = [
+  {
+    icon: Bot,
+    title: "AI Automation Systems",
+    description: "We build workflows that handle your repetitive tasks automatically.",
+  },
+  {
+    icon: MousePointerClick,
+    title: "No-Code Setup",
+    description: "No technical skills needed — everything is simple, clean, and ready to use.",
+  },
+  {
+    icon: Clock,
+    title: "Time Optimization",
+    description: "Save 10–50 hours every week by eliminating manual work.",
+  },
+  {
+    icon: Settings2,
+    title: "Custom Workflows",
+    description: "Every system is designed based on how you work.",
+  },
+  {
+    icon: Rocket,
+    title: "Execution Focused",
+    description: "Not ideas. Not theory. Only systems that actually get things done.",
+  },
+  {
+    icon: TrendingUp,
+    title: "Scalable Systems",
+    description: "What works today grows with you tomorrow.",
+  },
+];
 
 const Mission = () => {
   const coreValues = [
@@ -80,6 +114,42 @@ const Mission = () => {
                   <span className="font-semibold">{value.title}:</span>
                   <span className="text-muted-foreground ml-2">"{value.description}"</span>
                 </div>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+
+        {/* Features */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
+          className="mt-20"
+        >
+          <h3 className="font-display text-2xl md:text-3xl font-bold mb-12 tracking-wide">
+            Features that turn thinking into execution
+          </h3>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {features.map((feature, index) => (
+              <motion.div
+                key={feature.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.1 * index }}
+                className="group rounded-xl border border-border bg-background/50 p-6 transition-all duration-300 hover:border-primary/40 hover:shadow-[0_0_20px_hsl(var(--primary)/0.1)] hover:scale-[1.03]"
+              >
+                <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg border border-border bg-muted/50 transition-colors duration-300 group-hover:border-primary/40 group-hover:bg-primary/10">
+                  <feature.icon className="h-5 w-5 text-muted-foreground transition-colors duration-300 group-hover:text-primary" />
+                </div>
+                <h4 className="mb-2 text-lg font-semibold text-foreground">
+                  {feature.title}
+                </h4>
+                <p className="text-sm leading-relaxed text-muted-foreground">
+                  {feature.description}
+                </p>
               </motion.div>
             ))}
           </div>

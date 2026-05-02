@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
-import thinkflowLogo from "@/assets/thinkflow-logo.png";
+
 
 const Services = () => {
   const services = [
@@ -30,16 +30,6 @@ const Services = () => {
   return (
     <section id="services" className="py-24 md:py-32 bg-background">
       <div className="container mx-auto px-6">
-        {/* Logo */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-          className="flex items-center gap-2 mb-16"
-        >
-          <img src={thinkflowLogo} alt="ThinkFlow" className="h-10 w-auto" />
-        </motion.div>
 
         {/* Tabbed Services */}
         <motion.div
