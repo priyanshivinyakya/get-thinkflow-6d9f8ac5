@@ -1,6 +1,12 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
+import { Button } from "@/components/ui/button";
+import { Dialog, DialogContent } from "@/components/ui/dialog";
+import FrictionCalculator from "./FrictionCalculator";
 
 const CTA = () => {
+  const [open, setOpen] = useState(false);
+
   return (
     <section id="standard" className="py-24 md:py-32 bg-background">
       <div className="container mx-auto px-6">
@@ -15,11 +21,23 @@ const CTA = () => {
           <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold mb-6 tracking-tight">
             See What You Can Automate
           </h2>
-          <p className="text-muted-foreground text-lg max-w-xl mx-auto leading-relaxed">
+          <p className="text-muted-foreground text-lg max-w-xl mx-auto leading-relaxed mb-8">
             Take our 30-second diagnostic to get your personalized Automation Score and projected Efficiency Gain.
           </p>
+          <Button
+            onClick={() => setOpen(true)}
+            className="bg-foreground text-background hover:bg-foreground/90 text-minimal tracking-[0.2em] px-8 py-6"
+          >
+            START AUDIT →
+          </Button>
         </motion.div>
       </div>
+
+      <Dialog open={open} onOpenChange={setOpen}>
+        <DialogContent className="sm:max-w-xl max-h-[90vh] overflow-y-auto bg-background border-border">
+          <FrictionCalculator embedded />
+        </DialogContent>
+      </Dialog>
     </section>
   );
 };
