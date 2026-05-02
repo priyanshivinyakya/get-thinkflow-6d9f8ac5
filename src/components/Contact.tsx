@@ -44,7 +44,7 @@ const Contact = () => {
               <h3 className="text-minimal text-primary tracking-[0.2em] mb-2">EMAIL</h3>
               <a
                 href="mailto:priyanshivinyakya@gmail.com"
-                className="text-xl hover:text-muted-foreground transition-colors block"
+                className="text-xl hover:text-muted-foreground transition-colors"
               >
                 priyanshivinyakya@gmail.com
               </a>
@@ -121,6 +121,17 @@ const Contact = () => {
         </div>
 
         {/* Built by footer */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.5 }}
+          className="mt-16 pt-8 border-t border-border text-center"
+        >
+          <p className="text-muted-foreground">
+            Built by Priyanshi Vinyakya 💡
+          </p>
+        </motion.div>
       </div>
     </section>
   );

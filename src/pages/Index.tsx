@@ -6,11 +6,9 @@ import Services from "@/components/Services";
 import ShowcaseCards from "@/components/ShowcaseCards";
 import Stats from "@/components/Stats";
 import Founder from "@/components/Founder";
-import CTA from "@/components/CTA";
+
 import Contact from "@/components/Contact";
-import Footer from "@/components/Footer";
 import AIBotButton from "@/components/AIBotButton";
-import ExitIntentModal from "@/components/ExitIntentModal";
 
 const Index = () => {
   return (
@@ -22,12 +20,10 @@ const Index = () => {
       <Services />
       <ShowcaseCards />
       <Stats />
-      <CTA />
       <Founder />
+      
       <Contact />
-      <Footer />
       <AIBotButton />
-      <ExitIntentModal />
     </div>
   );
 };
