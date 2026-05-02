@@ -1,9 +1,11 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { useNavigate } from "react-router-dom";
+import { Dialog, DialogContent } from "@/components/ui/dialog";
+import FrictionCalculator from "./FrictionCalculator";
 
 const CTA = () => {
-  const navigate = useNavigate();
+  const [open, setOpen] = useState(false);
 
   return (
     <section id="standard" className="py-24 md:py-32 bg-background">
@@ -23,13 +25,19 @@ const CTA = () => {
             Take our 30-second diagnostic to get your personalized Automation Score and projected Efficiency Gain.
           </p>
           <Button
-            onClick={() => navigate("/audit")}
+            onClick={() => setOpen(true)}
             className="bg-foreground text-background hover:bg-foreground/90 text-minimal tracking-[0.2em] px-8 py-6"
           >
             START AUDIT →
           </Button>
         </motion.div>
       </div>
+
+      <Dialog open={open} onOpenChange={setOpen}>
+        <DialogContent className="sm:max-w-xl max-h-[90vh] overflow-y-auto bg-background border-border">
+          <FrictionCalculator embedded />
+        </DialogContent>
+      </Dialog>
     </section>
   );
 };
