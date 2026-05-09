@@ -63,7 +63,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.6, ease: [0.16, 1, 0.3, 1] }}
-          className="font-display text-2xl md:text-4xl lg:text-5xl font-bold tracking-tight text-foreground leading-[1.05] whitespace-nowrap"
+          className="font-display text-3xl md:text-5xl lg:text-[3.5rem] font-bold tracking-tight text-foreground leading-[1.05] whitespace-nowrap"
           style={{ textShadow: '0 0 60px rgba(255,255,255,0.1)' }}
         >
           Not everyone automates.
@@ -84,7 +84,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 30, scale: 0.9 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
           transition={{ duration: 0.7, delay: 1.8, ease: [0.34, 1.56, 0.64, 1] }}
-          className="mt-8 flex flex-wrap items-center justify-center gap-4"
+          className="mt-10 flex flex-wrap items-center justify-center gap-4"
         >
           <Button
             size="lg"
@@ -109,9 +109,9 @@ const Hero = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 2.1 }}
-          className="mt-5 text-xs md:text-sm text-muted-foreground/60 tracking-wide"
+          className="mt-6 text-xs md:text-sm text-muted-foreground/60 tracking-wide"
         >
-          No code. No complexity. Just smarter workflows.
+          Built for modern businesses to automate smarter.
         </motion.p>
 
         {/* Tagline above video */}
@@ -119,7 +119,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, delay: 2.5, ease: [0.16, 1, 0.3, 1] }}
-          className="mt-16 text-sm md:text-base uppercase tracking-[0.25em] text-foreground/70"
+          className="mt-14 text-sm md:text-base uppercase tracking-[0.25em] text-foreground/70"
         >
           Built for teams that don't scale manually
         </motion.p>
@@ -144,9 +144,9 @@ const Hero = () => {
           />
 
           <div
-            className="relative rounded-2xl overflow-hidden border border-white/10 bg-black transition-transform duration-700 ease-out group-hover:scale-[1.025]"
+            className="relative rounded-2xl overflow-hidden border border-cyan-400/20 bg-black transition-transform duration-700 ease-out group-hover:scale-[1.025]"
             style={{
-              boxShadow: '0 40px 100px -20px rgba(0,0,0,0.8), 0 0 80px rgba(0,194,255,0.15)',
+              boxShadow: '0 40px 100px -20px rgba(0,0,0,0.8), 0 0 60px rgba(0,194,255,0.15), 0 0 12px rgba(0,194,255,0.1), inset 0 0 60px rgba(0,0,0,0.2)',
             }}
           >
             <video
