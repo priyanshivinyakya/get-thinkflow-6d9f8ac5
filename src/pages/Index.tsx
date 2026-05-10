@@ -11,6 +11,7 @@ import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import AIBotButton from "@/components/AIBotButton";
 import ExitIntentModal from "@/components/ExitIntentModal";
+import WorkflowComparison from "@/components/WorkflowComparison";
 
 const Index = () => {
   return (
@@ -22,6 +23,7 @@ const Index = () => {
       <Services />
       <ShowcaseCards />
       <Stats />
+      <WorkflowComparison />
       <CTA />
       <Founder />
       <Contact />
