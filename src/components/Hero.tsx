@@ -74,19 +74,9 @@ const Hero = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1.2, delay: 1.2, ease: "easeOut" }}
-          className="mt-6 max-w-2xl text-base md:text-lg text-muted-foreground leading-relaxed"
+          className="mt-6 max-w-2xl text-sm md:text-base text-muted-foreground leading-relaxed"
         >
-          Architecting the invisible infrastructure of industry leaders.
-        </motion.p>
-
-        {/* Anti-service line */}
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 1.5, ease: "easeOut" }}
-          className="mt-3 text-xs md:text-sm italic text-muted-foreground/70 tracking-wide"
-        >
-          We don't build bots — we engineer scale.
+          ThinkFlow transforms manual workflows into intelligent, automated systems — so your business runs faster, smarter, and without chaos.
         </motion.p>
 
         {/* 4. CTA Buttons pop in */}
@@ -114,22 +104,11 @@ const Hero = () => {
           </Button>
         </motion.div>
 
-        {/* Ghost secondary CTA */}
-        <motion.button
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.8, delay: 2.0 }}
-          onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}
-          className="mt-5 text-xs md:text-sm tracking-[0.2em] uppercase text-muted-foreground/70 hover:text-foreground transition-colors duration-300 border-b border-muted-foreground/30 hover:border-foreground/60 pb-1"
-        >
-          View the Methodology
-        </motion.button>
-
         {/* Trust line */}
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 0.8, delay: 2.2 }}
+          transition={{ duration: 0.8, delay: 2.1 }}
           className="mt-6 text-xs md:text-sm text-muted-foreground/60 tracking-wide"
         >
           Built for modern businesses to automate smarter.

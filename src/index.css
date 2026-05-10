@@ -128,27 +128,6 @@
     @apply tracking-[0.2em] uppercase text-xs font-medium;
   }
   
-  /* Glass card — subtle backdrop blur with gradient border */
-  .glass-card {
-    @apply relative bg-white/[0.02] backdrop-blur-md;
-    border: 1px solid transparent;
-    background-image:
-      linear-gradient(hsl(0 0% 5% / 0.6), hsl(0 0% 5% / 0.6)),
-      linear-gradient(135deg, hsl(0 0% 100% / 0.18), hsl(0 0% 100% / 0.02) 40%, hsl(0 0% 100% / 0.08));
-    background-origin: border-box;
-    background-clip: padding-box, border-box;
-  }
-
-  /* Top loading bar */
-  @keyframes top-loader {
-    0% { transform: translateX(-100%); }
-    60% { transform: translateX(0%); }
-    100% { transform: translateX(100%); }
-  }
-  .top-loader-bar {
-    animation: top-loader 1.4s cubic-bezier(0.65, 0, 0.35, 1) forwards;
-  }
-
   /* Hero Image Overlay */
   .hero-overlay {
     background: var(--gradient-overlay);

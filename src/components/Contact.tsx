@@ -1,7 +1,14 @@
 import { motion } from "framer-motion";
-import DiscoveryForm from "./DiscoveryForm";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Label } from "@/components/ui/label";
 
 const Contact = () => {
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    // Form submission logic would go here
+  };
 
   return (
     <section id="contact" className="py-24 md:py-32 bg-card border-t border-border">
@@ -66,14 +73,50 @@ const Contact = () => {
             </div>
           </motion.div>
 
-          {/* Multi-step Discovery */}
+          {/* Contact Form */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <DiscoveryForm />
+            <form onSubmit={handleSubmit} className="space-y-6 p-6 border border-border rounded-lg bg-background/50">
+              <div className="space-y-2">
+                <Label htmlFor="name">Name</Label>
+                <Input 
+                  id="name" 
+                  placeholder="Your name" 
+                  required 
+                  className="bg-muted/50 border-border"
+                />
+              </div>
+              
+              <div className="space-y-2">
+                <Label htmlFor="email">Email</Label>
+                <Input 
+                  id="email" 
+                  type="email" 
+                  placeholder="you@example.com" 
+                  required 
+                  className="bg-muted/50 border-border"
+                />
+              </div>
+              
+              <div className="space-y-2">
+                <Label htmlFor="message">Message</Label>
+                <Textarea 
+                  id="message" 
+                  placeholder="How can I help you?" 
+                  rows={5}
+                  required 
+                  className="bg-muted/50 border-border resize-none"
+                />
+              </div>
+              
+              <Button type="submit" className="w-full bg-primary hover:bg-primary/90">
+                Send Message
+              </Button>
+            </form>
           </motion.div>
         </div>
 

@@ -11,14 +11,12 @@ import Contact from "./pages/Contact";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 import NotFound from "./pages/NotFound";
-import TopLoader from "./components/TopLoader";
 
 const queryClient = new QueryClient();
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
-      <TopLoader />
       <Toaster />
       <Sonner />
       <BrowserRouter>
