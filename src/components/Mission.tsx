@@ -1,36 +1,21 @@
 import { motion } from "framer-motion";
-import { Bot, MousePointerClick, Clock, Settings2, Rocket, TrendingUp } from "lucide-react";
+import { Bot, Clock, Settings2 } from "lucide-react";
 
 const features = [
   {
     icon: Bot,
-    title: "AI Automation Systems",
-    description: "We build workflows that handle your repetitive tasks automatically.",
-  },
-  {
-    icon: MousePointerClick,
-    title: "No-Code Setup",
-    description: "No technical skills needed — everything is simple, clean, and ready to use.",
+    title: "AI workflows",
+    description: "Repetitive tasks, handled automatically.",
   },
   {
     icon: Clock,
-    title: "Time Optimization",
-    description: "Save 10–50 hours every week by eliminating manual work.",
+    title: "Hours back",
+    description: "Save 10–50 hours every week.",
   },
   {
     icon: Settings2,
-    title: "Custom Workflows",
-    description: "Every system is designed based on how you work.",
-  },
-  {
-    icon: Rocket,
-    title: "Execution Focused",
-    description: "Not ideas. Not theory. Only systems that actually get things done.",
-  },
-  {
-    icon: TrendingUp,
-    title: "Scalable Systems",
-    description: "What works today grows with you tomorrow.",
+    title: "Built for you",
+    description: "Designed around how you actually work.",
   },
 ];
 
@@ -83,8 +68,8 @@ const Mission = () => {
           <h2 className="font-display text-3xl md:text-4xl font-bold mb-6 tracking-wide">
             MISSION
           </h2>
-          <p className="text-muted-foreground text-lg md:text-xl max-w-4xl">
-            "At ThinkFlow, we architect intelligence to streamline business processes. Our mission is to help elite enterprises unlock efficiency and growth through autonomous, domain-specific AI solutions."
+          <p className="text-muted-foreground text-lg md:text-xl max-w-3xl">
+            Help teams unlock efficiency through autonomous, domain-specific AI.
           </p>
         </motion.div>
 
@@ -155,18 +140,6 @@ const Mission = () => {
           </div>
         </motion.div>
 
-        {/* Footer Quote */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.8, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
-          className="mt-16 pt-8 border-t border-border"
-        >
-          <p className="text-muted-foreground text-sm text-center italic">
-            "Founded to revolutionize operations, ThinkFlow empowers companies with secure AI technology that handles specialized industry tasks with precision"
-          </p>
-        </motion.div>
       </div>
     </section>
   );

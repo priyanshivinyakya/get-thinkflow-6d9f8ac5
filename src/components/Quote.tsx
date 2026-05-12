@@ -22,27 +22,9 @@ const Quote = () => {
           </div>
 
           {/* Main Quote */}
-          <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-medium mb-8 leading-relaxed">
-            "IN 2026, SCALE ISN'T MEASURED BY HEADCOUNT. IT IS MEASURED BY THE FLOW OF YOUR INTELLIGENCE."
+          <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-medium leading-relaxed">
+            "Scale isn't measured by headcount. It's measured by the flow of your intelligence."
           </h2>
-
-          <p className="text-muted-foreground text-lg md:text-xl mb-12 max-w-3xl mx-auto">
-            Most agencies build tools. We don't just build tools; we architect the autonomous departments that eliminate manual friction.
-          </p>
-
-          {/* Tags */}
-          <div className="flex flex-wrap justify-center gap-4">
-            <span className="px-4 py-2 border border-border text-minimal text-muted-foreground">
-              Encrypted.
-              
-            </span>
-            <span className="px-4 py-2 border border-border text-minimal text-muted-foreground">
-              Secure.
-            </span>
-            <span className="px-4 py-2 border border-border text-minimal text-muted-foreground">
-              Autonomous.
-            </span>
-          </div>
         </motion.div>
       </div>
     </section>

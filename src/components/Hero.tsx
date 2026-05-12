@@ -36,15 +36,13 @@ const Hero = () => {
         }}
       />
 
-      {/* Pulsing glow behind video */}
-      <motion.div
-        className="absolute left-1/2 top-[70%] -translate-x-1/2 -translate-y-1/2 w-[90%] max-w-[1200px] h-[560px] rounded-full pointer-events-none"
+      {/* Static soft glow behind video */}
+      <div
+        className="absolute left-1/2 top-[70%] -translate-x-1/2 -translate-y-1/2 w-[80%] max-w-[1000px] h-[420px] rounded-full pointer-events-none"
         style={{
-          background: 'radial-gradient(closest-side, rgba(0,194,255,0.28), rgba(0,194,255,0.08) 50%, transparent 75%)',
+          background: 'radial-gradient(closest-side, rgba(0,194,255,0.15), transparent 70%)',
           filter: 'blur(60px)',
         }}
-        animate={{ opacity: [0.7, 1, 0.7], scale: [1, 1.05, 1] }}
-        transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
       />
 
       <div className="relative z-10 container mx-auto px-6 md:px-10 flex flex-col items-center text-center">
@@ -111,17 +109,7 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 2.1 }}
           className="mt-6 text-xs md:text-sm text-muted-foreground/60 tracking-wide"
         >
-          Built for modern businesses to automate smarter.
-        </motion.p>
-
-        {/* Tagline above video */}
-        <motion.p
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.9, delay: 2.5, ease: [0.16, 1, 0.3, 1] }}
-          className="mt-14 text-sm md:text-base uppercase tracking-[0.25em] text-foreground/70"
-        >
-          Built for teams that don't scale manually
+          Built in public. Made for operators.
         </motion.p>
 
         {/* 5. Video delayed reveal with glow */}
@@ -132,21 +120,10 @@ const Hero = () => {
           transition={{ duration: 1.4, delay: 2.8, ease: [0.16, 1, 0.3, 1] }}
           className="relative mt-8 w-full max-w-7xl group"
         >
-          <motion.div
-            aria-hidden
-            className="absolute -inset-10 rounded-[2rem] pointer-events-none"
-            style={{
-              background: 'radial-gradient(closest-side, rgba(0,194,255,0.35), rgba(0,194,255,0.08) 60%, transparent 80%)',
-              filter: 'blur(50px)',
-            }}
-            animate={{ opacity: [0.6, 0.95, 0.6] }}
-            transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-          />
-
           <div
-            className="relative rounded-2xl overflow-hidden border border-cyan-400/20 bg-black transition-transform duration-700 ease-out group-hover:scale-[1.025]"
+            className="relative rounded-2xl overflow-hidden border border-white/10 bg-black"
             style={{
-              boxShadow: '0 40px 100px -20px rgba(0,0,0,0.8), 0 0 60px rgba(0,194,255,0.15), 0 0 12px rgba(0,194,255,0.1), inset 0 0 60px rgba(0,0,0,0.2)',
+              boxShadow: '0 40px 100px -20px rgba(0,0,0,0.8), 0 0 40px rgba(0,194,255,0.08)',
             }}
           >
             <video
