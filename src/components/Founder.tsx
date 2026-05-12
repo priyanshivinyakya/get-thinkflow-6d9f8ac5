@@ -15,8 +15,8 @@ const Founder = () => {
           <h3 className="font-display text-2xl md:text-3xl font-bold mb-6 tracking-wide">
             THE THINKFLOW STANDARD
           </h3>
-          <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
-            While our 2026 partner slots are currently open, our architectures are built on the same frameworks that have reduced operational overhead by up to 70% in industrial benchmarks. We don't just build tools; we implement proven, high-performance cognitive structures designed for scale.
+          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+            Built on frameworks that cut operational overhead by up to 70%.
           </p>
         </motion.div>
       </div>

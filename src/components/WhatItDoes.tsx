@@ -29,7 +29,7 @@ const WhatItDoes = () => {
           transition={{ duration: 0.7, delay: 0.2 }}
           className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto"
         >
-          ThinkFlow is an AI execution layer that connects your leads, tasks and follow-ups into one automated pipeline — so nothing slips, and your team focuses only on work that matters.
+          One pipeline that turns leads into action — without the manual work.
         </motion.p>
 
         <motion.div
