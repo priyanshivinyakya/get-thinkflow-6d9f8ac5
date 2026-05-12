@@ -1,36 +1,21 @@
 import { motion } from "framer-motion";
-import { Bot, MousePointerClick, Clock, Settings2, Rocket, TrendingUp } from "lucide-react";
+import { Bot, Clock, Settings2 } from "lucide-react";
 
 const features = [
   {
     icon: Bot,
-    title: "AI Automation Systems",
-    description: "We build workflows that handle your repetitive tasks automatically.",
-  },
-  {
-    icon: MousePointerClick,
-    title: "No-Code Setup",
-    description: "No technical skills needed — everything is simple, clean, and ready to use.",
+    title: "AI workflows",
+    description: "Repetitive tasks, handled automatically.",
   },
   {
     icon: Clock,
-    title: "Time Optimization",
-    description: "Save 10–50 hours every week by eliminating manual work.",
+    title: "Hours back",
+    description: "Save 10–50 hours every week.",
   },
   {
     icon: Settings2,
-    title: "Custom Workflows",
-    description: "Every system is designed based on how you work.",
-  },
-  {
-    icon: Rocket,
-    title: "Execution Focused",
-    description: "Not ideas. Not theory. Only systems that actually get things done.",
-  },
-  {
-    icon: TrendingUp,
-    title: "Scalable Systems",
-    description: "What works today grows with you tomorrow.",
+    title: "Built for you",
+    description: "Designed around how you actually work.",
   },
 ];
 
