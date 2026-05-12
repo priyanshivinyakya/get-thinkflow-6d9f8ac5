@@ -68,8 +68,8 @@ const Mission = () => {
           <h2 className="font-display text-3xl md:text-4xl font-bold mb-6 tracking-wide">
             MISSION
           </h2>
-          <p className="text-muted-foreground text-lg md:text-xl max-w-4xl">
-            "At ThinkFlow, we architect intelligence to streamline business processes. Our mission is to help elite enterprises unlock efficiency and growth through autonomous, domain-specific AI solutions."
+          <p className="text-muted-foreground text-lg md:text-xl max-w-3xl">
+            Help teams unlock efficiency through autonomous, domain-specific AI.
           </p>
         </motion.div>
 
@@ -140,18 +140,6 @@ const Mission = () => {
           </div>
         </motion.div>
 
-        {/* Footer Quote */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.8, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
-          className="mt-16 pt-8 border-t border-border"
-        >
-          <p className="text-muted-foreground text-sm text-center italic">
-            "Founded to revolutionize operations, ThinkFlow empowers companies with secure AI technology that handles specialized industry tasks with precision"
-          </p>
-        </motion.div>
       </div>
     </section>
   );
