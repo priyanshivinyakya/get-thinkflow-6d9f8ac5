@@ -63,10 +63,10 @@ const Hero = () => {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.6, ease: [0.16, 1, 0.3, 1] }}
-          className="font-display text-3xl md:text-5xl lg:text-[3.5rem] font-bold tracking-tight text-foreground leading-[1.05] whitespace-nowrap"
+          className="font-display text-3xl md:text-5xl lg:text-[3.5rem] font-bold tracking-tight text-foreground leading-[1.05]"
           style={{ textShadow: '0 0 60px rgba(255,255,255,0.1)' }}
         >
-          Not everyone automates.
+          Automate execution with AI
         </motion.h1>
 
         {/* 3. Subtext fade */}
@@ -74,9 +74,9 @@ const Hero = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1.2, delay: 1.2, ease: "easeOut" }}
-          className="mt-6 max-w-2xl text-sm md:text-base text-muted-foreground leading-relaxed"
+          className="mt-6 max-w-2xl text-base md:text-lg text-muted-foreground leading-relaxed"
         >
-          ThinkFlow transforms manual workflows into intelligent, automated systems — so your business runs faster, smarter, and without chaos.
+          Leads → Tasks → Follow-ups. Automatically.
         </motion.p>
 
         {/* 4. CTA Buttons pop in */}
@@ -90,17 +90,17 @@ const Hero = () => {
             size="lg"
             className="px-8 py-6 text-base font-medium tracking-wide bg-white text-black hover:bg-white/90 rounded-full transition-all duration-300"
             style={{ boxShadow: '0 0 25px rgba(255,255,255,0.18), 0 4px 18px rgba(0,0,0,0.4)' }}
-            onClick={() => document.getElementById('demo-video')?.scrollIntoView({ behavior: 'smooth', block: 'center' })}
+            onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
           >
-            See it in action
+            Get Early Access
           </Button>
           <Button
             size="lg"
             variant="outline"
             className="px-8 py-6 text-base font-medium tracking-wide rounded-full border-muted-foreground/30 text-foreground hover:border-foreground/60 hover:bg-white/5 transition-all duration-300"
-            onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+            onClick={() => document.getElementById('demo-video')?.scrollIntoView({ behavior: 'smooth', block: 'center' })}
           >
-            Audit your workflow
+            Watch Demo
           </Button>
         </motion.div>
 
