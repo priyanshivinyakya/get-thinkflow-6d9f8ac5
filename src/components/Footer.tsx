@@ -85,8 +85,9 @@ const Footer = () => {
       {/* Bottom bar */}
       <div className="border-t border-border">
         <div className="container mx-auto px-6 py-6 flex flex-col md:flex-row items-center justify-between gap-3">
-          <p className="text-muted-foreground text-sm font-medium">
-            Not everyone automates.
+          <p className="text-muted-foreground text-sm font-medium flex items-center gap-2">
+            <span className="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+            Built in Public
           </p>
           <p className="text-muted-foreground text-sm">
             © 2026 ThinkFlow. From Chaos → Execution.
