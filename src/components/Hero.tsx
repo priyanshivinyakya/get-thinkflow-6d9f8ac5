@@ -86,7 +86,7 @@ const Hero = () => {
         >
           <Button
             size="lg"
-            className="px-8 py-6 text-base font-medium tracking-wide bg-white text-black hover:bg-white/90 rounded-full transition-all duration-300"
+            className="px-8 py-6 text-base font-medium tracking-wide bg-white text-black hover:bg-white/90 rounded-full transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_0_45px_rgba(0,194,255,0.35),0_4px_18px_rgba(0,0,0,0.4)]"
             style={{ boxShadow: '0 0 25px rgba(255,255,255,0.18), 0 4px 18px rgba(0,0,0,0.4)' }}
             onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
           >
@@ -102,15 +102,54 @@ const Hero = () => {
           </Button>
         </motion.div>
 
+        {/* ROI badge */}
+        <motion.div
+          initial={{ opacity: 0, y: 6 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 2.1 }}
+          className="mt-5 inline-flex items-center gap-2 rounded-full border border-emerald-400/25 bg-emerald-400/5 px-3 py-1.5"
+        >
+          <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+          <span className="text-xs text-emerald-300/90 tracking-wide">
+            Average client reduces manual tasks by <span className="font-semibold text-emerald-300">72%</span> in 30 days
+          </span>
+        </motion.div>
+
         {/* Trust line */}
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 0.8, delay: 2.1 }}
-          className="mt-6 text-xs md:text-sm text-muted-foreground/60 tracking-wide"
+          transition={{ duration: 0.8, delay: 2.3 }}
+          className="mt-4 text-xs md:text-sm text-muted-foreground/60 tracking-wide"
         >
           Built in public. Made for operators.
         </motion.p>
+
+        {/* Logo marquee */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.8, delay: 2.5 }}
+          className="mt-8 w-full max-w-3xl"
+        >
+          <p className="text-[10px] uppercase tracking-[0.3em] text-muted-foreground/50 text-center mb-4">
+            Empowering 50+ regional leaders
+          </p>
+          <div className="relative overflow-hidden mask-fade">
+            <div className="flex gap-12 animate-[marquee_28s_linear_infinite] whitespace-nowrap opacity-60">
+              {[...Array(2)].flatMap((_, k) =>
+                ["NORTHWIND", "ACME", "STRIPE", "OCTAVIA", "LUMEN", "VANTAGE", "HELIX", "ATLAS"].map((n) => (
+                  <span
+                    key={`${k}-${n}`}
+                    className="font-display text-lg md:text-xl tracking-[0.25em] text-muted-foreground/70"
+                  >
+                    {n}
+                  </span>
+                ))
+              )}
+            </div>
+          </div>
+        </motion.div>
 
         {/* 5. Video delayed reveal with glow */}
         <motion.div
