@@ -2,6 +2,8 @@ import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
 import Problem from "@/components/Problem";
 import ProductPreview from "@/components/ProductPreview";
+import IndustryTabs from "@/components/IndustryTabs";
+import StickyMobileCTA from "@/components/StickyMobileCTA";
 import Mission from "@/components/Mission";
 import Services from "@/components/Services";
 import ShowcaseCards from "@/components/ShowcaseCards";
@@ -19,6 +21,7 @@ const Index = () => {
       <Hero />
       <Problem />
       <ProductPreview />
+      <IndustryTabs />
       <Mission />
       <Services />
       <ShowcaseCards />
@@ -28,6 +31,7 @@ const Index = () => {
       <Footer />
       <AIBotButton />
       <ExitIntentModal />
+      <StickyMobileCTA />
     </div>
   );
 };
