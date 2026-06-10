@@ -1,4 +1,4 @@
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { useState } from "react";
 import { Truck, Landmark, Scale, ArrowRight } from "lucide-react";
 
@@ -74,44 +74,41 @@ const IndustryTabs = () => {
           })}
         </div>
 
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={current.id}
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -8 }}
-            transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-            className="grid md:grid-cols-2 gap-6"
-          >
-            {/* Before */}
-            <div className="rounded-xl border border-white/10 bg-card/40 p-6">
-              <p className="text-xs uppercase tracking-[0.25em] text-red-400/80 mb-3">Before</p>
-              <p className="text-foreground/90 leading-relaxed">{current.before}</p>
-            </div>
-            {/* After */}
-            <div className="rounded-xl border border-emerald-400/20 bg-card/60 p-6">
-              <p className="text-xs uppercase tracking-[0.25em] text-emerald-400 mb-3">After ThinkFlow</p>
-              <p className="text-foreground/90 leading-relaxed">{current.after}</p>
-            </div>
+        <motion.div
+          key={current.id}
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
+          className="grid md:grid-cols-2 gap-6"
+        >
+          {/* Before */}
+          <div className="rounded-xl border border-white/10 bg-card/40 p-6">
+            <p className="text-xs uppercase tracking-[0.25em] text-red-400/80 mb-3">Before</p>
+            <p className="text-foreground/90 leading-relaxed">{current.before}</p>
+          </div>
+          {/* After */}
+          <div className="rounded-xl border border-emerald-400/20 bg-card/60 p-6">
+            <p className="text-xs uppercase tracking-[0.25em] text-emerald-400 mb-3">After ThinkFlow</p>
+            <p className="text-foreground/90 leading-relaxed">{current.after}</p>
+          </div>
 
-            {/* Features */}
-            <div className="md:col-span-2 grid sm:grid-cols-3 gap-3">
-              {current.features.map((f) => (
-                <div
-                  key={f}
-                  className="flex items-center gap-3 rounded-lg border border-white/10 bg-background/40 px-4 py-3"
-                >
-                  <ArrowRight className="w-4 h-4 text-cyan-400 shrink-0" />
-                  <span className="text-sm">{f}</span>
-                </div>
-              ))}
-            </div>
+          {/* Features */}
+          <div className="md:col-span-2 grid sm:grid-cols-3 gap-3">
+            {current.features.map((f) => (
+              <div
+                key={f}
+                className="flex items-center gap-3 rounded-lg border border-white/10 bg-background/40 px-4 py-3"
+              >
+                <ArrowRight className="w-4 h-4 text-cyan-400 shrink-0" />
+                <span className="text-sm">{f}</span>
+              </div>
+            ))}
+          </div>
 
-            <p className="md:col-span-2 text-xs text-muted-foreground text-center mt-2">
-              Pain we hear from {current.label.toLowerCase()} teams: {current.pain}
-            </p>
-          </motion.div>
-        </AnimatePresence>
+          <p className="md:col-span-2 text-xs text-muted-foreground text-center mt-2">
+            Pain we hear from {current.label.toLowerCase()} teams: {current.pain}
+          </p>
+        </motion.div>
       </div>
     </section>
   );

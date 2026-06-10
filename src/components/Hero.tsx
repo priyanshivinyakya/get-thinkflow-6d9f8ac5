@@ -61,10 +61,10 @@ const Hero = () => {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.6, ease: [0.16, 1, 0.3, 1] }}
-          className="font-display text-3xl md:text-5xl lg:text-[3.5rem] font-bold tracking-tight text-foreground leading-[1.05]"
+          className="font-display text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-foreground leading-[1.02]"
           style={{ textShadow: '0 0 60px rgba(255,255,255,0.1)' }}
         >
-          Automate execution with AI
+          From Chaos <span className="text-muted-foreground/70">→</span> Execution
         </motion.h1>
 
         {/* 3. Subtext fade */}
@@ -74,7 +74,7 @@ const Hero = () => {
           transition={{ duration: 1.2, delay: 1.2, ease: "easeOut" }}
           className="mt-6 max-w-2xl text-base md:text-lg text-muted-foreground leading-relaxed"
         >
-          Leads → Tasks → Follow-ups. Automatically.
+          Automate workflows instantly. Leads → Tasks → Follow-ups, done for you.
         </motion.p>
 
         {/* 4. CTA Buttons pop in */}
@@ -86,11 +86,11 @@ const Hero = () => {
         >
           <Button
             size="lg"
-            className="px-8 py-6 text-base font-medium tracking-wide bg-white text-black hover:bg-white/90 rounded-full transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_0_45px_rgba(0,194,255,0.35),0_4px_18px_rgba(0,0,0,0.4)]"
-            style={{ boxShadow: '0 0 25px rgba(255,255,255,0.18), 0 4px 18px rgba(0,0,0,0.4)' }}
-            onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+            className="px-8 py-6 text-base font-semibold tracking-wide bg-white text-black hover:bg-white/90 rounded-full transition-all duration-300 hover:scale-[1.03] hover:shadow-[0_0_45px_rgba(0,194,255,0.45),0_4px_18px_rgba(0,0,0,0.4)]"
+            style={{ boxShadow: '0 0 25px rgba(255,255,255,0.22), 0 4px 18px rgba(0,0,0,0.4)' }}
+            onClick={() => document.getElementById('standard')?.scrollIntoView({ behavior: 'smooth' })}
           >
-            Get Early Access
+            See My Automation Score →
           </Button>
           <Button
             size="lg"
@@ -193,6 +193,21 @@ const Hero = () => {
           </div>
         </motion.div>
       </div>
+
+      {/* Scroll indicator */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 3.2, duration: 0.8 }}
+        className="absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-muted-foreground/60"
+      >
+        <span className="text-[10px] uppercase tracking-[0.3em]">Scroll</span>
+        <motion.div
+          animate={{ y: [0, 6, 0] }}
+          transition={{ duration: 1.6, repeat: Infinity, ease: "easeInOut" }}
+          className="w-px h-8 bg-gradient-to-b from-white/40 to-transparent"
+        />
+      </motion.div>
 
       <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
     </section>

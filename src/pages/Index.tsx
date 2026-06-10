@@ -9,6 +9,7 @@ import Services from "@/components/Services";
 import ShowcaseCards from "@/components/ShowcaseCards";
 import Stats from "@/components/Stats";
 import CTA from "@/components/CTA";
+import Testimonials from "@/components/Testimonials";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import AIBotButton from "@/components/AIBotButton";
@@ -27,6 +28,7 @@ const Index = () => {
       <ShowcaseCards />
       <Stats />
       <CTA />
+      <Testimonials />
       <Contact />
       <Footer />
       <AIBotButton />

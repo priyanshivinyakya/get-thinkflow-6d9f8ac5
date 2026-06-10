@@ -21,13 +21,13 @@ const Contact = () => {
           className="text-center mb-12"
         >
           <span className="inline-block px-4 py-2 bg-muted text-muted-foreground text-sm rounded-full mb-4">
-            Get in touch
+            Let's talk
           </span>
           <h2 className="font-display text-3xl md:text-4xl font-bold text-primary tracking-wide mb-3">
-            Contact
+            Book a Demo
           </h2>
           <p className="text-xs text-muted-foreground tracking-wide">
-            LOOKING TO AUTOMATE YOUR WORKFLOWS? LET'S TALK.
+            GET YOUR AUTOMATION BLUEPRINT — TAILORED TO YOUR WORKFLOW.
           </p>
         </motion.div>
 
@@ -103,10 +103,10 @@ const Contact = () => {
               </div>
               
               <div className="space-y-2">
-                <Label htmlFor="message">Message</Label>
+                <Label htmlFor="message">What would you like to automate?</Label>
                 <Textarea 
                   id="message" 
-                  placeholder="How can I help you?" 
+                  placeholder="Tell us about the workflow you'd like to automate..." 
                   rows={5}
                   required 
                   className="bg-muted/50 border-border resize-none"
@@ -114,7 +114,7 @@ const Contact = () => {
               </div>
               
               <Button type="submit" className="w-full bg-primary hover:bg-primary/90">
-                Send Message
+                Book a Demo →
               </Button>
             </form>
           </motion.div>
