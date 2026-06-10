@@ -186,7 +186,7 @@ const Work = () => {
               Let's discuss how we can bring your architectural vision to life
             </p>
             <a 
-              href="#contact" 
+              href="#book-demo" 
               className="inline-block text-minimal text-foreground hover:text-muted-foreground transition-colors duration-300 relative group"
             >
               GET IN TOUCH
