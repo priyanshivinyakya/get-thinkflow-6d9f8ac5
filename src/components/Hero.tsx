@@ -61,10 +61,10 @@ const Hero = () => {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.6, ease: [0.16, 1, 0.3, 1] }}
-          className="font-display text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-foreground leading-[1.02]"
+          className="font-display text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-foreground leading-[1.02] max-w-5xl"
           style={{ textShadow: '0 0 60px rgba(255,255,255,0.1)' }}
         >
-          From Chaos <span className="text-muted-foreground/70">→</span> Execution
+          AI workflows that run the busywork <span className="text-muted-foreground/70">between your tools</span>
         </motion.h1>
 
         {/* 3. Subtext fade */}
@@ -74,7 +74,7 @@ const Hero = () => {
           transition={{ duration: 1.2, delay: 1.2, ease: "easeOut" }}
           className="mt-6 max-w-2xl text-base md:text-lg text-muted-foreground leading-relaxed"
         >
-          Automate workflows instantly. Leads → Tasks → Follow-ups, done for you.
+          ThinkFlow designs autonomous systems that qualify leads, update CRMs, trigger internal tasks, and coordinate follow-ups across your sales and operations stack.
         </motion.p>
 
         {/* 4. CTA Buttons pop in */}
@@ -88,19 +88,20 @@ const Hero = () => {
             size="lg"
             className="px-8 py-6 text-base font-semibold tracking-wide bg-white text-black hover:bg-white/90 rounded-full transition-all duration-300 hover:scale-[1.03] hover:shadow-[0_0_45px_rgba(0,194,255,0.45),0_4px_18px_rgba(0,0,0,0.4)]"
             style={{ boxShadow: '0 0 25px rgba(255,255,255,0.22), 0 4px 18px rgba(0,0,0,0.4)' }}
-            onClick={() => document.getElementById('standard')?.scrollIntoView({ behavior: 'smooth' })}
+            onClick={() => document.getElementById('book-demo')?.scrollIntoView({ behavior: 'smooth' })}
           >
-            See My Automation Score →
+            Book a Workflow Audit →
           </Button>
           <Button
             size="lg"
             variant="outline"
             className="px-8 py-6 text-base font-medium tracking-wide rounded-full border-muted-foreground/30 text-foreground hover:border-foreground/60 hover:bg-white/5 transition-all duration-300"
-            onClick={() => document.getElementById('demo-video')?.scrollIntoView({ behavior: 'smooth', block: 'center' })}
+            onClick={() => document.getElementById('workflow-demo')?.scrollIntoView({ behavior: 'smooth', block: 'start' })}
           >
-            Watch Demo
+            See Example Automations
           </Button>
         </motion.div>
+
 
         {/* ROI badge */}
         <motion.div
@@ -111,7 +112,7 @@ const Hero = () => {
         >
           <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
           <span className="text-xs text-emerald-300/90 tracking-wide">
-            Average client reduces manual tasks by <span className="font-semibold text-emerald-300">72%</span> in 30 days
+            Built for sales, ops & internal teams · cut manual handoffs by <span className="font-semibold text-emerald-300">60–80%</span>
           </span>
         </motion.div>
 
