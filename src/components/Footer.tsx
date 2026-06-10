@@ -36,7 +36,7 @@ const Footer = () => {
               </span>
             </div>
             <p className="text-muted-foreground text-sm leading-relaxed max-w-[240px]">
-              Architecting intelligence for the modern enterprise.
+              From Chaos → Execution.
             </p>
           </div>
 
