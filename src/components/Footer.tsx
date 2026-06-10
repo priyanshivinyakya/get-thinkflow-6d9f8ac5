@@ -12,7 +12,7 @@ const Footer = () => {
     { label: "About", id: "mission" },
     { label: "Services", id: "services" },
     { label: "Use Cases", id: "standard" },
-    { label: "Contact", id: "contact" },
+    { label: "Contact", id: "book-demo" },
   ];
 
   const socials = [

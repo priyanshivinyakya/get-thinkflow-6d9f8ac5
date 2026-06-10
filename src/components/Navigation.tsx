@@ -41,7 +41,7 @@ const Navigation = () => {
             STANDARD
           </button>
           <button 
-            onClick={() => scrollToSection("contact")}
+            onClick={() => scrollToSection("book-demo")}
             className="text-minimal text-muted-foreground hover:text-foreground transition-colors duration-300"
           >
             CONTACT
@@ -87,7 +87,7 @@ const Navigation = () => {
                 STANDARD
               </button>
               <button 
-                onClick={() => scrollToSection("contact")}
+                onClick={() => scrollToSection("book-demo")}
                 className="block text-minimal text-muted-foreground hover:text-foreground transition-colors duration-300"
               >
                 CONTACT

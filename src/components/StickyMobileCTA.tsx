@@ -22,7 +22,7 @@ const StickyMobileCTA = () => {
           className="fixed bottom-4 left-4 right-4 z-40 md:hidden"
         >
           <button
-            onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
+            onClick={() => document.getElementById("book-demo")?.scrollIntoView({ behavior: "smooth" })}
             className="w-full rounded-full bg-white text-black py-4 text-sm font-semibold tracking-wide shadow-2xl"
             style={{ boxShadow: "0 10px 30px rgba(0,0,0,0.5), 0 0 25px rgba(255,255,255,0.15)" }}
           >
