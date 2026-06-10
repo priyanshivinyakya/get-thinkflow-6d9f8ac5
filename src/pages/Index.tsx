@@ -1,12 +1,14 @@
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
 import Problem from "@/components/Problem";
+import WorkflowDemo from "@/components/WorkflowDemo";
+import NotChatbot from "@/components/NotChatbot";
 import ProductPreview from "@/components/ProductPreview";
 import IndustryTabs from "@/components/IndustryTabs";
+import Process from "@/components/Process";
+import Integrations from "@/components/Integrations";
 import StickyMobileCTA from "@/components/StickyMobileCTA";
-import Mission from "@/components/Mission";
 import Services from "@/components/Services";
-import ShowcaseCards from "@/components/ShowcaseCards";
 import Stats from "@/components/Stats";
 import CTA from "@/components/CTA";
 import Testimonials from "@/components/Testimonials";
@@ -21,14 +23,18 @@ const Index = () => {
       <Navigation />
       <Hero />
       <Problem />
+      <div id="workflow-demo">
+        <WorkflowDemo />
+      </div>
+      <NotChatbot />
       <ProductPreview />
       <IndustryTabs />
-      <Mission />
+      <Process />
+      <Integrations />
       <Services />
-      <ShowcaseCards />
       <Stats />
-      <CTA />
       <Testimonials />
+      <CTA />
       <Contact />
       <Footer />
       <AIBotButton />

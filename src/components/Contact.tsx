@@ -11,7 +11,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-24 md:py-32 bg-card border-t border-border">
+    <section id="book-demo" className="py-24 md:py-32 bg-card border-t border-border">
       <div className="container mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
