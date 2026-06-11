@@ -61,7 +61,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.6, ease: [0.16, 1, 0.3, 1] }}
-          className="font-display text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-foreground leading-[1.02] max-w-5xl"
+          className="font-display text-3xl md:text-5xl lg:text-6xl font-bold tracking-tight text-foreground leading-[1.05] max-w-4xl"
           style={{ textShadow: '0 0 60px rgba(255,255,255,0.1)' }}
         >
           AI workflows that run the busywork <span className="text-muted-foreground/70">between your tools</span>
