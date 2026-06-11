@@ -61,7 +61,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.6, ease: [0.16, 1, 0.3, 1] }}
-          className="font-display text-3xl md:text-5xl lg:text-6xl font-bold tracking-tight text-foreground leading-[1.05] max-w-4xl"
+          className="font-display text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight text-foreground leading-[1.1] whitespace-nowrap"
           style={{ textShadow: '0 0 60px rgba(255,255,255,0.1)' }}
         >
           AI workflows that run the busywork <span className="text-muted-foreground/70">between your tools</span>
@@ -72,7 +72,7 @@ const Hero = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1.2, delay: 1.2, ease: "easeOut" }}
-          className="mt-6 max-w-2xl text-base md:text-lg text-muted-foreground leading-relaxed"
+          className="mt-5 max-w-xl text-sm md:text-base text-muted-foreground leading-relaxed"
         >
           ThinkFlow designs autonomous systems that qualify leads, update CRMs, trigger internal tasks, and coordinate follow-ups across your sales and operations stack.
         </motion.p>
