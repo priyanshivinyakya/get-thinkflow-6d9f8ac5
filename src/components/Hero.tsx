@@ -72,7 +72,7 @@ const Hero = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1.2, delay: 1.2, ease: "easeOut" }}
-          className="mt-5 max-w-xl text-sm md:text-base text-muted-foreground leading-relaxed"
+          className="mt-5 max-w-3xl md:max-w-4xl lg:max-w-5xl text-sm md:text-base text-muted-foreground leading-relaxed [text-wrap:balance]"
         >
           ThinkFlow designs autonomous systems that qualify leads, update CRMs, trigger internal tasks, and coordinate follow-ups across your sales and operations stack.
         </motion.p>
