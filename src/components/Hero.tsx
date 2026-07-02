@@ -64,7 +64,7 @@ const Hero = () => {
           className="font-display text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight text-foreground leading-[1.1] whitespace-nowrap"
           style={{ textShadow: '0 0 60px rgba(255,255,255,0.1)' }}
         >
-          The tasks between your tools, <span className="text-muted-foreground/70">automated</span>
+          The tasks between your tools, <span className="text-white">automated</span>
         </motion.h1>
 
         {/* 3. Subtext fade */}
