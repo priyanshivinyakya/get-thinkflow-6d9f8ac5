@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
+import { Link } from "react-router-dom";
 import thinkflowLogo from "@/assets/thinkflow-logo.png";
 
 const Navigation = () => {
@@ -22,12 +23,12 @@ const Navigation = () => {
         </div>
         
         <div className="hidden md:flex items-center space-x-12">
-          <button 
-            onClick={() => scrollToSection("mission")}
+          <Link 
+            to="/results"
             className="text-minimal text-muted-foreground hover:text-foreground transition-colors duration-300"
           >
             RESULTS
-          </button>
+          </Link>
           <button 
             onClick={() => scrollToSection("standard")}
             className="text-minimal text-muted-foreground hover:text-foreground transition-colors duration-300"
@@ -62,12 +63,13 @@ const Navigation = () => {
             className="md:hidden bg-background border-b border-border overflow-hidden"
           >
             <div className="container mx-auto px-6 py-6 space-y-4">
-              <button 
-                onClick={() => scrollToSection("mission")}
+              <Link 
+                to="/results"
                 className="block text-minimal text-muted-foreground hover:text-foreground transition-colors duration-300"
+                onClick={() => setIsMenuOpen(false)}
               >
                 RESULTS
-              </button>
+              </Link>
               <button 
                 onClick={() => scrollToSection("standard")}
                 className="block text-minimal text-muted-foreground hover:text-foreground transition-colors duration-300"
