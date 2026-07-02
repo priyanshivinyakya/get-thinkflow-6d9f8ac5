@@ -8,7 +8,6 @@ import IndustryTabs from "@/components/IndustryTabs";
 import Process from "@/components/Process";
 import Integrations from "@/components/Integrations";
 import StickyMobileCTA from "@/components/StickyMobileCTA";
-import Services from "@/components/Services";
 import Stats from "@/components/Stats";
 import CTA from "@/components/CTA";
 import Testimonials from "@/components/Testimonials";
@@ -31,7 +30,6 @@ const Index = () => {
       <IndustryTabs />
       <Process />
       <Integrations />
-      <Services />
       <Stats />
       <Testimonials />
       <CTA />
