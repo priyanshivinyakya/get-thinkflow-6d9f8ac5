@@ -23,12 +23,12 @@ const Navigation = () => {
         </div>
         
         <div className="hidden md:flex items-center space-x-12">
-          <button 
-            onClick={() => scrollToSection("mission")}
+          <Link 
+            to="/results"
             className="text-minimal text-muted-foreground hover:text-foreground transition-colors duration-300"
           >
             RESULTS
-          </button>
+          </Link>
           <button 
             onClick={() => scrollToSection("standard")}
             className="text-minimal text-muted-foreground hover:text-foreground transition-colors duration-300"
