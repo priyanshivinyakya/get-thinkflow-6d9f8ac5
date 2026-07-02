@@ -64,7 +64,7 @@ const Hero = () => {
           className="font-display text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight text-foreground leading-[1.1] whitespace-nowrap"
           style={{ textShadow: '0 0 60px rgba(255,255,255,0.1)' }}
         >
-          AI workflows that run the busywork <span className="text-muted-foreground/70">between your tools</span>
+          The tasks between your tools, <span className="text-muted-foreground/70">automated</span>
         </motion.h1>
 
         {/* 3. Subtext fade */}
@@ -74,7 +74,7 @@ const Hero = () => {
           transition={{ duration: 1.2, delay: 1.2, ease: "easeOut" }}
           className="mt-5 max-w-3xl md:max-w-4xl lg:max-w-5xl text-sm md:text-base text-muted-foreground leading-relaxed [text-wrap:balance]"
         >
-          ThinkFlow designs autonomous systems that qualify leads, update CRMs, trigger internal tasks, and coordinate follow-ups across your sales and operations stack.
+          ThinkFlow builds AI systems that qualify leads, update your CRM, and keep follow-ups moving — automatically.
         </motion.p>
 
         {/* 4. CTA Buttons pop in */}
