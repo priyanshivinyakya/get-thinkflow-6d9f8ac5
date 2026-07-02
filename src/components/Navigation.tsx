@@ -26,7 +26,7 @@ const Navigation = () => {
             onClick={() => scrollToSection("mission")}
             className="text-minimal text-muted-foreground hover:text-foreground transition-colors duration-300"
           >
-            MISSION
+            RESULTS
           </button>
           <button 
             onClick={() => scrollToSection("standard")}
@@ -66,7 +66,7 @@ const Navigation = () => {
                 onClick={() => scrollToSection("mission")}
                 className="block text-minimal text-muted-foreground hover:text-foreground transition-colors duration-300"
               >
-                MISSION
+                RESULTS
               </button>
               <button 
                 onClick={() => scrollToSection("standard")}
