@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
+import { Link } from "react-router-dom";
 import thinkflowLogo from "@/assets/thinkflow-logo.png";
 
 const Navigation = () => {
